@@ -1,0 +1,19 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+
+.logo {
+  width: 117px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo_text {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 130%;
+  letter-spacing: 0px;
+  color: var(--primary-color);
+}
