@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="container">
       <Header />
+      <hr className="header_line"></hr>
     </div>
   );
 }

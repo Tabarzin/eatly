@@ -27,3 +27,10 @@
     max-width: 1440px;
   }
 }
+
+.header_line {
+  border: none;
+  height: 1px;
+  background-color: #cbcbcb;
+  margin: 10px 0;
+}
