@@ -1,0 +1,6 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+
+.header {
+  display: flex;
+}

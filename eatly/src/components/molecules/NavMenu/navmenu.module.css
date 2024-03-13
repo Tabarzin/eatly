@@ -1,0 +1,9 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+
+.navmenu {
+  display: flex;
+  width: 13.4375rem;
+  align-items: center;
+  justify-content: space-around;
+}
