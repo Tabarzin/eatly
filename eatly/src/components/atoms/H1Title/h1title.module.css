@@ -1,0 +1,15 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+
+.h1title {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 76px;
+  line-height: 120%;
+  letter-spacing: -3px;
+  color: var(--hero-black-color);
+}
+
+.h1title__other_color {
+  color: var(--primary-color);
+}

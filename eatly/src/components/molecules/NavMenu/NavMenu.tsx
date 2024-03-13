@@ -1,12 +1,13 @@
+import React from "react";
 import st from "./navmenu.module.css";
 import NavLink from "../../atoms/NavLink/NavLink";
 
 const NavMenu = () => {
   return (
     <div className={st.navmenu}>
-      <NavLink title="Recipes" />
-      <NavLink title="FAQ" />
-      <NavLink title="Blog" />
+      <NavLink props="Recipes" />
+      <NavLink props="FAQ" />
+      <NavLink props="Blog" />
     </div>
   );
 };

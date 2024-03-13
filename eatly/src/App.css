@@ -34,3 +34,7 @@
   background-color: #cbcbcb;
   margin: 10px 0;
 }
+
+.highlight {
+  color: var(--primary-color);
+}

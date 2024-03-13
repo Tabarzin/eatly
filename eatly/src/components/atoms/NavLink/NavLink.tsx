@@ -1,11 +1,9 @@
+import React from "react";
 import st from "./navlink.module.css";
+import { StringProps } from "../../../types/types";
 
-interface NavLinkProps {
-  title: string;
-}
-
-const NavLink: React.FC<NavLinkProps> = ({ title }) => {
-  return <span className={st.navlink}>{title}</span>;
+const NavLink: React.FC<StringProps> = ({ props }) => {
+  return <span className={st.navlink}>{props}</span>;
 };
 
 export default NavLink;

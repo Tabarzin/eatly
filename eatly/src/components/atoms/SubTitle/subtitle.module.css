@@ -1,0 +1,11 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+
+.subtitle {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 2px;
+  color: var(--hero-black-color);
+}
