@@ -1,7 +1,8 @@
 :root {
   --primary-color: #6c5fbc;
   --navlink-color: #606060;
-  --hero-black-color: #201f1f;
-
-  /* FONT COLORS */
+  --black-color: #201f1f;
+  --white-color: #ffffff;
+  --features-sm-color: #c5bfed;
+  --paragraph-color: #676767;
 }

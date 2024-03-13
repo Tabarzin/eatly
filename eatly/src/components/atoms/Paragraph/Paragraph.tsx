@@ -10,9 +10,12 @@ const Paragraph: React.FC<ParagraphProps> = ({
   children,
   type = "primary",
 }) => {
-  const textColorClass = type === "primary" ? st.primaryText : st.secondaryText;
+  const mainClass = st.paragraph;
+  const textClass = type === "primary" ? st.primaryText : st.secondaryText;
 
-  return <p className={textColorClass}>{children}</p>;
+  return (
+    <p className={`${mainClass} ${textClass} ${st.highlight}`}>{children}</p>
+  );
 };
 
 export default Paragraph;

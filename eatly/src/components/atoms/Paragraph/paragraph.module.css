@@ -1,2 +1,17 @@
 @import "../../../styles/variables.module.css";
 @import "../../../styles/fonts.css";
+@import "../../../styles/general_styles.css";
+
+.paragraph {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+}
+
+.primaryText {
+  color: var(--paragraph-color);
+}
+
+.secondaryText {
+}

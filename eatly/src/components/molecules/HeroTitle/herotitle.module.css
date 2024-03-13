@@ -1,0 +1,17 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+@import "../../../styles/general_styles.css";
+
+.subtitle_line {
+  border: none;
+  height: 1px;
+  background-color: #cbcbcb;
+  margin: 10px 0;
+  width: 3.375rem;
+}
+
+.subtitle_block {
+  display: flex;
+  width: 15rem;
+  justify-content: space-between;
+}

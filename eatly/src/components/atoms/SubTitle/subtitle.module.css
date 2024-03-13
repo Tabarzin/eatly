@@ -7,5 +7,6 @@
   font-size: 16px;
   line-height: 120%;
   letter-spacing: 2px;
-  color: var(--hero-black-color);
+  color: var(--black-color);
+  opacity: 20%;
 }
