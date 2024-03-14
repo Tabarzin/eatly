@@ -31,6 +31,13 @@
 .header_line {
   border: none;
   height: 1px;
-  background-color: #cbcbcb;
+  background-color: var(--hr-line-color);
+  margin: 10px 0;
+}
+
+.line {
+  border: none;
+  height: 1px;
+  background-color: var(--hr-line-color);
   margin: 10px 0;
 }

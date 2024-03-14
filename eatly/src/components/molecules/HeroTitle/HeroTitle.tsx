@@ -1,7 +1,6 @@
 import st from "./herotitle.module.css";
-import H1Title from "../../atoms/H1Title/H1Title";
 import SubTitle from "../../atoms/SubTitle/SubTitle";
-import Title from "../../atoms/Title/Title";
+import Text from "../../atoms/Text/Text";
 
 const HeroTitle = () => {
   return (
@@ -10,8 +9,9 @@ const HeroTitle = () => {
         <hr className={st.subtitle_line}></hr>
         <SubTitle props="OVER 1000 USERS" />
       </div>
-
-      <H1Title props="Enjoy Foods All Over The World" />
+      <Text type={"h1"}>
+        Enjoy Foods All Over The <span className={st.highlight}>World</span>
+      </Text>
     </div>
   );
 };

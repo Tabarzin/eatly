@@ -1,0 +1,21 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+@import "../../../styles/general_styles.css";
+
+.accordionbutton {
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: none;
+}
+
+.minus {
+  color: var(--white-color);
+  font-size: 23px;
+}
+
+.plus {
+  color: var(--white-color);
+  font-size: 23px;
+}

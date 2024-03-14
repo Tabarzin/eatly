@@ -1,0 +1,26 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+@import "../../../styles/general_styles.css";
+
+.infocard {
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 42px;
+  color: var(--black-color);
+}
+
+.details {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #8e97a6;
+}
+
+.text {
+  display: flex;
+}

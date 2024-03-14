@@ -3,7 +3,7 @@ import st from "./paragraph.module.css";
 
 interface ParagraphProps {
   type?: "primary" | "secondary";
-  children: string;
+  children: React.ReactNode;
 }
 
 const Paragraph: React.FC<ParagraphProps> = ({

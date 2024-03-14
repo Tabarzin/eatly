@@ -12,7 +12,7 @@
   flex-direction: column;
 }
 
-.large {
+.features_large {
   font-family: var(--font-features);
   font-weight: 700;
   font-size: 42px;
@@ -21,7 +21,7 @@
   color: var(--white-color);
 }
 
-.small {
+.features_small {
   font-family: var(--font-secondary);
   color: var(--features-sm-color);
   font-weight: 500;

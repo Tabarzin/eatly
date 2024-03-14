@@ -2,6 +2,7 @@
 @import "../../../styles/fonts.css";
 
 .button {
+  display: inline-flex;
   border-radius: 12px;
   border: none;
   font-family: var(--font-primary);

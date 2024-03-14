@@ -1,0 +1,39 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+@import "../../../styles/general_styles.css";
+
+.purchases_card {
+  display: flex;
+  width: 330px;
+  height: 90px;
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--black-color);
+}
+
+.status {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 140%;
+  color: var(--black-color);
+}
+
+.cancelledStatus {
+  color: #fb471d;
+}
+
+.time {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 140%;
+  color: #acadb9;
+}

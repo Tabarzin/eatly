@@ -1,0 +1,20 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+@import "../../../styles/general_styles.css";
+
+.review {
+  /* background-color: var(--feedback-bg-color); */
+}
+
+.reviewcards_wrapper {
+  display: flex;
+}
+
+.small_review_cards_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.small_review_cards {
+  display: flex;
+}

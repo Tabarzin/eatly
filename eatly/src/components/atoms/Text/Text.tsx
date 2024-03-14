@@ -44,16 +44,37 @@ import st from "./text.module.css";
 // export default Text;
 
 type TextProps = {
-  type?: "h1" | "h2" | "p";
+  type?: "h1" | "h2" | "h3" | "p" | "span" | "li";
   children: ReactNode;
   customStyle?: CSSProperties;
+  className?: string;
 };
 
-const Text: React.FC<TextProps> = ({ type = "p", children, customStyle }) => {
+// const Text: React.FC<TextProps> = ({ type = "p", children, customStyle }) => {
+//   const Tag = type as keyof JSX.IntrinsicElements;
+//   const className = st[`text-${type}`];
+//   return (
+//     <Tag className={className} style={customStyle}>
+//       {children}
+//     </Tag>
+//   );
+// };
+
+const Text: React.FC<TextProps> = ({
+  type = "p",
+  children,
+  customStyle,
+  className,
+}) => {
   const Tag = type as keyof JSX.IntrinsicElements;
-  const className = st[`text-${type}`];
+  const defaultClassName = st[`text-${type}`];
+
+  const combinedClassName = className
+    ? `${defaultClassName} ${className}`
+    : defaultClassName;
+
   return (
-    <Tag className={className} style={customStyle}>
+    <Tag className={combinedClassName} style={customStyle}>
       {children}
     </Tag>
   );
