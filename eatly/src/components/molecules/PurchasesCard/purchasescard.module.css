@@ -4,11 +4,12 @@
 
 .purchases_card {
   display: flex;
-  width: 330px;
-
-  border-radius: 16px;
+  width: 20.625rem;
+  height: 5.625rem;
+  border-radius: 12px;
   background-color: #ffffff;
-  gap: 16px;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .title {
@@ -18,6 +19,7 @@
   line-height: 140%;
   color: var(--black-color);
   margin-bottom: 0;
+  margin-top: 10px;
 }
 
 .status {

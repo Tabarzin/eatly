@@ -1,0 +1,25 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+@import "../../../styles/general_styles.css";
+
+.heroimage {
+  position: relative;
+  width: 42.5rem;
+  height: 37.9375rem;
+}
+
+.inesNE {
+  position: absolute;
+}
+
+.hero_purch_card {
+  position: absolute;
+}
+
+.graph {
+  position: absolute;
+}
+
+.inesSW {
+  position: absolute;
+}
