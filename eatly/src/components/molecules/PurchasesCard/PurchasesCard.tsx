@@ -22,11 +22,11 @@ const PurchasesCard: React.FC<PurchasesCardProps> = ({
       <div>
         <img src={imageSrc} alt="Purchase" />
       </div>
-      <div>
+      <div className={st.text_block}>
         <p className={st.title}>{title}</p>
         <p className={`${st.status} ${statusClass}`}>{status}</p>
-        <p className={st.time}>{time}</p>
       </div>
+      <p className={st.time}>{time}</p>
     </div>
   );
 };
