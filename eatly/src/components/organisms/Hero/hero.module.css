@@ -6,7 +6,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 83px;
+  margin-bottom: 145px;
+}
+
+.hero_text_block {
+  margin-left: 72px;
+  margin-top: 71px;
 }
 
 .buttons {

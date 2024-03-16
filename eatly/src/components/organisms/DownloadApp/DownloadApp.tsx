@@ -8,7 +8,7 @@ const DownloadApp = () => {
   return (
     <>
       <div className={st.downloadapp}>
-        <img src={mobile} alt="Mobile Phone" />
+        <img src={mobile} className={st.download_img} alt="Mobile Phone" />
         <DownloadAppTextBtnBlock />
       </div>
     </>

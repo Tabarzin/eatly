@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className={st.footer}>
       <div className={st.footer_nav}>
-        <Logo />
+        <Logo isLarge />
         <NavMenu />
       </div>
       <hr className={st.line}></hr>

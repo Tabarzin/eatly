@@ -4,6 +4,7 @@
 
 .purchases {
   display: flex;
+  margin: 0 auto;
   margin-top: 130px;
   justify-content: space-between;
   width: 1250px;

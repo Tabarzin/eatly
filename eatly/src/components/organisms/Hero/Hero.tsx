@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <>
       <div className={st.hero}>
-        <div>
+        <div className={st.hero_text_block}>
           <HeroTitle />
           <Paragraph>
             EatLy help you set saving goals, earn cash back offers, Go <br />

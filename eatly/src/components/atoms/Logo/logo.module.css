@@ -2,7 +2,7 @@
 @import "../../../styles/fonts.css";
 
 .logo {
-  width: 129px;
+  width: 130px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -12,7 +12,7 @@
   font-family: var(--font-primary);
   font-weight: 600;
   font-style: normal;
-  font-size: 22px;
+  /* font-size: 22px; */
   line-height: 130%;
   letter-spacing: 0px;
   color: var(--primary-color);

@@ -5,23 +5,30 @@
 .footer {
   background-color: #eaeaea;
   height: 21.5625rem;
+  width: 90rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer_nav {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 1221px;
 }
 
 .line {
   border: none;
   height: 1px;
   background-color: var(--hr-line-color);
-  margin: 10px 0;
+  margin: 40px 0;
 }
 
 .copyright_social {
   display: flex;
   justify-content: space-between;
+  margin: 0 90px;
 }
 .copyright {
   display: flex;
@@ -33,6 +40,6 @@
 }
 .social {
   display: flex;
-  width: 288px;
+  width: 215px;
   justify-content: space-between;
 }

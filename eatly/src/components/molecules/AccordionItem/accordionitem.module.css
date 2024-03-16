@@ -13,6 +13,7 @@
   font-weight: 600;
   font-size: 22px;
   color: var(--black-color);
+  margin-bottom: 11px;
 }
 
 .answer {
@@ -20,4 +21,5 @@
   font-weight: 400;
   font-size: 20px;
   color: var(--paragraph-color);
+  width: 815px;
 }

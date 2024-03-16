@@ -3,8 +3,6 @@
 @import "../../../styles/general_styles.css";
 
 .text_btn_block {
-  width: 35rem;
-  margin-left: 226px;
   position: relative;
 }
 
@@ -23,6 +21,6 @@
 
 .arrowSW {
   position: absolute;
-  top: 85%;
-  left: 28%;
+  top: 86%;
+  left: 31%;
 }

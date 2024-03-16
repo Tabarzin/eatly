@@ -4,28 +4,28 @@
 
 .heroimage {
   position: relative;
-  width: 40.5rem;
-  height: 36.9375rem;
+  width: 591px;
+  height: 603px;
   display: flex;
   align-items: flex-end;
 }
 
 .linesNE {
   position: absolute;
-  top: 7%;
-  right: 13%;
+  top: 9%;
+  right: 3%;
 }
 
 .hero_purch_card {
   position: absolute;
-  top: 13%;
-  left: 29%;
+  top: 15%;
+  left: 34%;
 }
 
 .graph {
   position: absolute;
-  top: 62%;
-  right: 72%;
+  top: 63%;
+  right: 68%;
 }
 
 .linesSW {
@@ -36,6 +36,6 @@
 
 .arrow_rope_r {
   position: absolute;
-  top: 32%;
-  right: 23%;
+  top: 34%;
+  right: 14%;
 }

@@ -1,20 +1,23 @@
 import st from "./faq.module.css";
 import Text from "../../atoms/Text/Text";
 import AccordionItem from "../../molecules/AccordionItem/AccordionItem";
+import faq_lines from "../../../assets/faq_lines.svg";
 
 const FAQ = () => {
   return (
-    <div>
-      <div>
-        <Text type={"h3"}>
-          Frequently Asked <span className={st.highlight}>Questions</span>
+    <div className={st.faq}>
+      <div className={st.faq_title_block}>
+        <img src={faq_lines} className={st.faq_lines} alt="Lines" />
+        <Text type={"h3"} className={st.h3}>
+          Frequently Asked <br />
+          <span className={st.highlight}>Questions</span>
         </Text>
       </div>
-      <div>
+      <div className={st.accordion}>
         <AccordionItem
           question={"How long does delivery take?"}
           answer={
-            "You Can Get Information By Contacting Our Support Team Have 24/7 Service.What is The Difference Between Free And Paid Plan ?"
+            "You Can Get Information By Contacting Our Support Team Have 24/7 Service. What is The Difference Between Free And Paid Plan ?"
           }
         />
         <hr className={st.line}></hr>

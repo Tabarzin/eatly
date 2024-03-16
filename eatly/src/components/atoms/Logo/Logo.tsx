@@ -1,12 +1,21 @@
+import React from "react";
 import st from "./logo.module.css";
 
-export default function Logo() {
+interface LogoProps {
+  isLarge?: boolean;
+}
+
+const Logo: React.FC<LogoProps> = ({ isLarge = false }) => {
+  const svgWidth = isLarge ? 61 : 46;
+  const svgHeight = isLarge ? 57 : 43;
+  const textSize = isLarge ? "28px" : "22px";
+
   return (
     <>
       <div className={st.logo}>
         <svg
-          width="46"
-          height="43"
+          width={svgWidth}
+          height={svgHeight}
           viewBox="0 0 46 43"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -58,8 +67,13 @@ export default function Logo() {
             strokeLinejoin="round"
           />
         </svg>
-        <span className={st.logo_text}>eatly</span>
+
+        <span className={st.logo_text} style={{ fontSize: textSize }}>
+          eatly
+        </span>
       </div>
     </>
   );
-}
+};
+
+export default Logo;

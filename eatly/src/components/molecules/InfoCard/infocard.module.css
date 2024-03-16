@@ -9,6 +9,10 @@
   border-radius: 30px;
 }
 
+.infocard_text {
+  margin-left: 40px;
+}
+
 .title {
   font-family: var(--font-primary);
   font-weight: 600;
