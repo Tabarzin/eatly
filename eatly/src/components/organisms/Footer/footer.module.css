@@ -15,7 +15,7 @@
 .footer_nav {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 110px;
 }
 
 .line {

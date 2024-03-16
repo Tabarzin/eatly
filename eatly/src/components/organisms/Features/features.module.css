@@ -76,10 +76,14 @@
   left: 159px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1439px) {
   .features,
   .features_blocks {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .features_right_lines {
+    width: 50%;
   }
 }
