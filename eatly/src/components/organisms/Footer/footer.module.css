@@ -5,17 +5,17 @@
 .footer {
   background-color: #eaeaea;
   height: 21.5625rem;
-  width: 90rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: -40px;
 }
 
 .footer_nav {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 1221px;
 }
 
 .line {

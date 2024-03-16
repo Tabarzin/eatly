@@ -13,3 +13,9 @@
   padding-left: 3.25rem;
   padding-right: 3.25rem;
 }
+
+@media (max-width: 400px) {
+  .navmenu {
+    margin-left: 0;
+  }
+}

@@ -3,7 +3,7 @@
 @import "../../../styles/general_styles.css";
 
 .faq {
-  width: 1152px;
+  /* width: 1152px; */
   height: 823px;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
 }
 
 .accordion {
-  width: 1152px;
+  width: 80%;
   height: 582px;
 }
 
@@ -40,4 +40,16 @@
   position: absolute;
   top: 6%;
   right: -19%;
+}
+
+@media (max-width: 1100px) {
+  .faq {
+    /* width: 72rem; */
+    height: 823px;
+  }
+
+  .accordion {
+    /* width: 72rem; */
+    height: 582px;
+  }
 }

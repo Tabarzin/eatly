@@ -4,28 +4,31 @@
 
 .heroimage {
   position: relative;
-  width: 591px;
-  height: 603px;
+  /* width: 591px;
+  height: 603px; */
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
   display: flex;
   align-items: flex-end;
 }
 
 .linesNE {
   position: absolute;
-  top: 9%;
-  right: 3%;
+  top: -20%;
+  right: -27%;
 }
 
 .hero_purch_card {
   position: absolute;
-  top: 15%;
-  left: 34%;
+  top: -13%;
+  left: 45%;
 }
 
 .graph {
   position: absolute;
-  top: 63%;
-  right: 68%;
+  top: 51%;
+  right: 60%;
 }
 
 .linesSW {
@@ -38,4 +41,10 @@
   position: absolute;
   top: 34%;
   right: 14%;
+}
+
+@media (max-width: 400px) {
+  .heroimage {
+    width: 190%;
+  }
 }

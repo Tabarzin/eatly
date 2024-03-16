@@ -21,7 +21,7 @@ const Hero = () => {
             <Button type={"secondary"} children="Go Pro" />
           </div>
         </div>
-        <div>
+        <div className={st.hero_image}>
           <HeroImage />
         </div>
       </div>

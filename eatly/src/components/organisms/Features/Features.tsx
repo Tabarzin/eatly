@@ -44,7 +44,7 @@ const Features = () => {
             alt="Line"
           />
           <img
-            className={st.right_line_1}
+            className={st.right_line_2}
             src={features_right_line_2}
             alt="Line"
           />

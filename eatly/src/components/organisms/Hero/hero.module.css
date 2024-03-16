@@ -4,18 +4,39 @@
 
 .hero {
   display: flex;
-  align-items: center;
+
   justify-content: space-between;
   margin-bottom: 145px;
 }
 
 .hero_text_block {
   margin-left: 72px;
-  margin-top: 71px;
+  margin-top: 87px;
 }
 
+.hero_image {
+  margin-right: 137px;
+  margin-top: 122px;
+}
 .buttons {
   width: 14.0625rem;
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 1400px) {
+  .hero {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero_text_block {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .buttons {
+    margin-bottom: 75px;
+  }
 }

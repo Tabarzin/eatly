@@ -5,15 +5,19 @@
 .purchases {
   display: flex;
   margin: 0 auto;
-  margin-top: 130px;
+  margin-top: 95px;
   justify-content: space-between;
-  width: 1250px;
+  align-items: center;
+  /* width: 1325px; */
+  width: 100%;
   height: 601px;
-  margin-bottom: 116px;
+  margin-bottom: 80px;
 }
 
 .text_block {
   width: 570px;
+  margin-left: 70px;
+  margin-top: -140px;
 }
 
 .purch_img {
@@ -27,4 +31,14 @@
 
 .h2 {
   margin-bottom: 50px;
+}
+
+@media (max-width: 1190px) {
+  .purchases {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 255px;
+    flex-wrap: wrap;
+  }
 }

@@ -55,3 +55,9 @@
   line-height: 21px;
   letter-spacing: 0;
 }
+
+@media (max-width: 400px) {
+  .text-h1 {
+    font-size: 60px;
+  }
+}

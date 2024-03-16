@@ -18,9 +18,9 @@
 .features {
   display: flex;
   background-color: var(--primary-color);
-  width: 1440px;
+
   align-items: center;
-  margin-left: -15px;
+  /* margin-left: -15px; */
   margin-bottom: 106px;
 }
 
@@ -61,6 +61,7 @@
 
 .features_right_lines {
   position: relative;
+  width: 5%;
 }
 
 .right_line_1 {
@@ -73,4 +74,12 @@
   position: absolute;
   top: -3px;
   left: 159px;
+}
+
+@media (max-width: 960px) {
+  .features,
+  .features_blocks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

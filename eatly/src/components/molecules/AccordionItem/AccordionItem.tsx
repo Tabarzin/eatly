@@ -16,7 +16,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer }) => {
   };
 
   return (
-    <div>
+    <div onClick={toggleAccordion}>
       <div className={st.accordionitem}>
         <Text type={"p"} className={st.question}>
           {question}
