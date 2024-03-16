@@ -7,10 +7,13 @@
   margin-bottom: 120px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .reviewcards_wrapper {
   display: flex;
+  width: 1225px;
 }
 
 .small_review_cards_block {
@@ -20,4 +23,8 @@
 
 .small_review_cards {
   display: flex;
+}
+
+.h3 {
+  margin-bottom: 100px;
 }
