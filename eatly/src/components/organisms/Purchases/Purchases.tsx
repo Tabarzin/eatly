@@ -9,30 +9,34 @@ import PurchasesCard from "../../molecules/PurchasesCard/PurchasesCard";
 const Purchases = () => {
   return (
     <div className={st.purchases}>
-      <div>
-        <Text type={"h2"}>
-          Control <span className={st.highlight}> Purchases</span> Via Dashboard
+      <div className={st.text_block}>
+        <Text className={st.h2} type={"h2"}>
+          Control <span className={st.highlight}> Purchases</span>
+          <br /> Via Dashboard
         </Text>
         <PurchasesCard
+          className={st.purch_card}
           imageSrc={purch_card_image_1}
           title="Chicken Hell"
           status="On The Way"
           time="3:09 PM"
         />
         <PurchasesCard
+          className={st.purch_card}
           imageSrc={purch_card_image_2}
           title="Swe Dish"
           status="Delivered"
           time="Yesterday"
         />
         <PurchasesCard
+          className={st.purch_card}
           imageSrc={purch_card_image_3}
           title="Fish Hell Veg"
           status="Cancelled"
           time="Yesterday"
         />
       </div>
-      <img src={purchases} alt="Purchases" />
+      <img className={st.purch_img} src={purchases} alt="Purchases" />
     </div>
   );
 };

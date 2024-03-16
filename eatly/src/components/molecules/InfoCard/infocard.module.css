@@ -3,6 +3,10 @@
 @import "../../../styles/general_styles.css";
 
 .infocard {
+  width: 400px;
+  height: 300px;
+  border: none;
+  border-radius: 30px;
 }
 
 .title {

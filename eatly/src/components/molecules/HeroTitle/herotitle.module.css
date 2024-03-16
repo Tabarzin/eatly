@@ -12,6 +12,16 @@
 
 .subtitle_block {
   display: flex;
-  width: 15rem;
+  width: 250px;
+  justify-content: space-between;
+}
+
+.h1 {
+  margin-top: 35px;
+}
+
+.line_sub {
+  display: flex;
+  width: 240px;
   justify-content: space-between;
 }

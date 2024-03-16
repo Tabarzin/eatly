@@ -1,3 +1,28 @@
 @import "../../../styles/variables.module.css";
 @import "../../../styles/fonts.css";
 @import "../../../styles/general_styles.css";
+
+.text_btn_block {
+  width: 35rem;
+  margin-left: 226px;
+  position: relative;
+}
+
+.h2 {
+  margin-top: 91px;
+  margin-bottom: 68px;
+}
+
+.list {
+  margin-bottom: 70px;
+}
+
+.arrow {
+  padding-left: 10px;
+}
+
+.arrowSW {
+  position: absolute;
+  top: 85%;
+  left: 28%;
+}

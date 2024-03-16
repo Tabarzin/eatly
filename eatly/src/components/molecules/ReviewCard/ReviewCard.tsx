@@ -14,7 +14,10 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   svgImage,
   isSmall,
 }) => {
-  const cardClassName = `reviewcard ${isSmall ? "smallcard" : "bigcard"}`;
+  const cardClassName = `${st.reviewcard} ${
+    isSmall ? st.smallcard : st.bigcard
+  }`;
+
   return (
     <div className={cardClassName}>
       <div className={st.name_quote}>

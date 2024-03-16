@@ -2,9 +2,15 @@
 @import "../../../styles/fonts.css";
 @import "../../../styles/general_styles.css";
 
+.places {
+  margin-top: 104px;
+  margin-bottom: 230px;
+}
+
 .h3 {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 40px;
 }
 
 .infocardblock {

@@ -3,7 +3,13 @@
 
 .navmenu {
   display: flex;
-  width: 13.4375rem;
   align-items: center;
-  justify-content: space-around;
+  margin-left: 5.76rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.spacer {
+  padding-left: 3.25rem;
+  padding-right: 3.25rem;
 }

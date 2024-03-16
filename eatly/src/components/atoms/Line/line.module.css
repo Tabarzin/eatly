@@ -2,6 +2,9 @@
 @import "../../../styles/fonts.css";
 @import "../../../styles/general_styles.css";
 
-.margin {
-  margin-bottom: 22px;
+.line {
+  border: none;
+  height: 1px;
+  background-color: var(--hr-line-color);
+  margin: 10px 0;
 }

@@ -3,7 +3,10 @@
 @import "../../../styles/general_styles.css";
 
 .review {
-  /* background-color: var(--feedback-bg-color); */
+  margin-top: 116px;
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: center;
 }
 
 .reviewcards_wrapper {

@@ -7,6 +7,7 @@ type PurchasesCardProps = {
   title: string;
   status: string;
   time: string;
+  className?: string;
 };
 
 const PurchasesCard: React.FC<PurchasesCardProps> = ({

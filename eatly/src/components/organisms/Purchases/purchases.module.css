@@ -4,4 +4,26 @@
 
 .purchases {
   display: flex;
+  margin-top: 130px;
+  justify-content: space-between;
+  width: 1250px;
+  height: 601px;
+  margin-bottom: 116px;
+}
+
+.text_block {
+  width: 570px;
+}
+
+.purch_img {
+  width: 550px;
+  height: 560px;
+}
+
+.purch_card {
+  padding-bottom: 10px;
+}
+
+.h2 {
+  margin-bottom: 50px;
 }

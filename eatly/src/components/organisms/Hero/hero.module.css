@@ -4,4 +4,13 @@
 
 .hero {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 83px;
+}
+
+.buttons {
+  width: 14.0625rem;
+  display: flex;
+  justify-content: space-between;
 }

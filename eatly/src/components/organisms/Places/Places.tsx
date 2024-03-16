@@ -7,7 +7,7 @@ import infocard_image_3 from "../../../assets/infocard_image_3.png";
 
 const Places = () => {
   return (
-    <div>
+    <div className={st.places}>
       <span className={st.h3}>
         <Text type={"h3"}>
           Our Top <span className={st.highlight}> Lunch</span>

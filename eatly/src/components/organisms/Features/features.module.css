@@ -2,11 +2,30 @@
 @import "../../../styles/fonts.css";
 @import "../../../styles/general_styles.css";
 
+.features_left_lines {
+  position: relative;
+  width: 21.25rem;
+}
+
+.line_1 {
+  position: absolute;
+  top: -2%;
+  left: 0%;
+}
+
+.line_2 {
+}
 .features {
   display: flex;
   background-color: var(--primary-color);
+  width: 1440px;
+  align-items: center;
+  margin-bottom: 106px;
 }
 
+.features_blocks {
+  display: flex;
+}
 .features_block {
   display: flex;
   flex-direction: column;
@@ -19,6 +38,7 @@
   line-height: 54px;
   letter-spacing: 0;
   color: var(--white-color);
+  margin-bottom: 0;
 }
 
 .features_small {
@@ -28,4 +48,28 @@
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0;
+}
+
+.vert_line {
+  background-color: #c5c5c5;
+  width: 1px;
+  height: 124px;
+  margin: 0 60px;
+  align-self: center;
+}
+
+.features_right_lines {
+  position: relative;
+}
+
+.right_line_1 {
+  position: absolute;
+  top: -14px;
+  left: 122px;
+}
+
+.right_line_2 {
+  position: absolute;
+  top: -3px;
+  left: 159px;
 }

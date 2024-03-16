@@ -7,19 +7,21 @@ import Purchases from "./components/organisms/Purchases/Purchases";
 import Review from "./components/organisms/Review/Review";
 import FAQ from "./components/organisms/FAQ/FAQ";
 import Footer from "./components/organisms/Footer/Footer";
+import Line from "./components/atoms/Line/Line";
 
 function App() {
   return (
     <div className="container">
       <Header />
-      <hr className="line"></hr>
+      <Line />
       <Hero />
       <Features />
       <DownloadApp />
-      <hr className="line"></hr>
+      <Line />
       <Places />
+      <Line />
       <Purchases />
-      <hr className="line"></hr>
+      <Line />
       <Review />
       <FAQ />
       <Footer />

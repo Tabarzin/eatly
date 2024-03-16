@@ -2,10 +2,10 @@
 @import "../../../styles/fonts.css";
 
 .logo {
-  width: 117px;
+  width: 129px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .logo_text {

@@ -6,14 +6,19 @@ import arrowSW from "../../../assets/arrowSW.png";
 
 const DownloadAppTextBtnBlock = () => {
   return (
-    <div>
-      <Text type={"h2"}>
-        Premium <span className={st.highlight}>Quality </span>For Your Health
+    <div className={st.text_btn_block}>
+      <Text className={st.h2} type={"h2"}>
+        Premium <span className={st.highlight}>Quality </span>
+        <br />
+        For Your Health
       </Text>
-      <List />
+      <div className={st.list}>
+        <List />
+      </div>
       <Button type={"primary"}>
-        Download{" "}
+        Download
         <svg
+          className={st.arrow}
           width="27"
           height="26"
           viewBox="0 0 27 26"
@@ -36,7 +41,7 @@ const DownloadAppTextBtnBlock = () => {
           />
         </svg>
       </Button>
-      <img src={arrowSW} alt="Arrow" />
+      <img className={st.arrowSW} src={arrowSW} alt="Arrow" />
     </div>
   );
 };
