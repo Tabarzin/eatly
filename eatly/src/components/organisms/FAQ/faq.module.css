@@ -4,7 +4,7 @@
 
 .faq {
   /* width: 1152px; */
-  height: 823px;
+  /* height: 823px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +20,7 @@
 
 .accordion {
   width: 80%;
-  height: 582px;
+  /* height: 582px; */
 }
 
 .h3 {
