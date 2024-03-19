@@ -1,18 +1,19 @@
-import Header from "./components/organisms/Header/Header";
-import Hero from "./components/organisms/Hero/Hero";
-import Features from "./components/organisms/Features/Features";
-import DownloadApp from "./components/organisms/DownloadApp/DownloadApp";
-import Places from "./components/organisms/Places/Places";
-import Purchases from "./components/organisms/Purchases/Purchases";
-import Review from "./components/organisms/Review/Review";
-import FAQ from "./components/organisms/FAQ/FAQ";
-import Footer from "./components/organisms/Footer/Footer";
-import Line from "./components/atoms/Line/Line";
+// import Header from "./components/organisms/Header/Header";
+// import Hero from "./components/organisms/Hero/Hero";
+// import Features from "./components/organisms/Features/Features";
+// import DownloadApp from "./components/organisms/DownloadApp/DownloadApp";
+// import Places from "./components/organisms/Places/Places";
+// import Purchases from "./components/organisms/Purchases/Purchases";
+// import Review from "./components/organisms/Review/Review";
+// import FAQ from "./components/organisms/FAQ/FAQ";
+// import Footer from "./components/organisms/Footer/Footer";
+// import Line from "./components/atoms/Line/Line";
+import HomePage from "./components/templates/HomePage";
 
 function App() {
   return (
     <div className="container">
-      <Header />
+      {/* <Header />
       <Line />
       <Hero />
       <Features />
@@ -24,7 +25,8 @@ function App() {
       <Line />
       <Review />
       <FAQ />
-      <Footer />
+      <Footer /> */}
+      <HomePage />
     </div>
   );
 }
