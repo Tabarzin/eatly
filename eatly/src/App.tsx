@@ -9,6 +9,7 @@
 // import Footer from "./components/organisms/Footer/Footer";
 // import Line from "./components/atoms/Line/Line";
 import HomePage from "./components/templates/HomePage/HomePage";
+import BlogPage from "./components/templates/BlogPage/BlogPage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <FAQ />
       <Footer /> */}
       <HomePage />
+      <BlogPage />
     </div>
   );
 }
