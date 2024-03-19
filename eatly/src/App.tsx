@@ -8,7 +8,7 @@
 // import FAQ from "./components/organisms/FAQ/FAQ";
 // import Footer from "./components/organisms/Footer/Footer";
 // import Line from "./components/atoms/Line/Line";
-import HomePage from "./components/templates/HomePage";
+import HomePage from "./components/templates/HomePage/HomePage";
 
 function App() {
   return (
