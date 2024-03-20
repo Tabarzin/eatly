@@ -12,25 +12,43 @@ import HomePage from "./components/templates/HomePage/HomePage";
 import BlogPage from "./components/templates/BlogPage/BlogPage";
 import BlogArticle from "./components/templates/BlogArticle/BlogArticle";
 
+// function App() {
+//   return (
+//     <div className="container">
+//       {/* <Header />
+//       <Line />
+//       <Hero />
+//       <Features />
+//       <DownloadApp />
+//       <Line />
+//       <Places />
+//       <Line />
+//       <Purchases />
+//       <Line />
+//       <Review />
+//       <FAQ />
+//       <Footer /> */}
+//       <HomePage />
+//       <BlogPage />
+//       <BlogArticle />
+//     </div>
+//   );
+// }
+
+import { Router, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <div className="container">
-      {/* <Header />
-      <Line />
-      <Hero />
-      <Features />
-      <DownloadApp />
-      <Line />
-      <Places />
-      <Line />
-      <Purchases />
-      <Line />
-      <Review />
-      <FAQ />
-      <Footer /> */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/article" element={<BlogArticle />} />
+
+        {/* <Route path="/*" element={<NotFound />} /> */}
+      </Routes>
+
       <HomePage />
-      <BlogPage />
-      <BlogArticle />
     </div>
   );
 }

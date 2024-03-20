@@ -1,14 +1,21 @@
 import st from "./navmenu.module.css";
 import NavLink from "../../atoms/NavLink/NavLink";
+import { HashLink as Link } from "react-router-hash-link";
 
 const NavMenu = () => {
   return (
     <div className={st.navmenu}>
-      <NavLink props="Recipes" />
+      <Link className={st.link} to="/#recipes">
+        <NavLink props="Recipes" />
+      </Link>
       <span className={st.spacer}>
-        <NavLink props="FAQ" />
+        <Link className={st.link} to="/#faq">
+          <NavLink props="FAQ" />
+        </Link>
       </span>
-      <NavLink props="Blog" />
+      <Link className={st.link} to="/blog">
+        <NavLink props="Blog" />
+      </Link>
     </div>
   );
 };
