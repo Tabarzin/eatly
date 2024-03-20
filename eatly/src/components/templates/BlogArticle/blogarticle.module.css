@@ -1,3 +1,96 @@
 @import "../../../styles/variables.module.css";
 @import "../../../styles/fonts.css";
 @import "../../../styles/general_styles.css";
+
+.spacer {
+  margin-bottom: 50px;
+}
+
+.article_block {
+  margin-bottom: 50px;
+}
+
+.user_rating_tags {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.written {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 16px;
+  color: #8d8d8d;
+}
+
+.username_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  line-height: 26px;
+  font-size: 18px;
+  color: var(--black-color);
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rating_tags {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+.rating_star {
+  display: flex;
+  align-items: center;
+}
+
+.tags {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 400;
+  color: #8d8d8d;
+}
+
+.rating {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #8e97a6;
+}
+.article_text {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 44px;
+  font-size: 22px;
+  color: var(--black-color);
+  margin-bottom: 40px;
+}
+.article_btn {
+}
+
+.comments {
+}
+.comments_title {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 44px;
+  color: var(--black-color);
+}
+
+.article_btn {
+  display: flex;
+  align-items: center;
+}

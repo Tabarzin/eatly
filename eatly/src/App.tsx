@@ -10,6 +10,7 @@
 // import Line from "./components/atoms/Line/Line";
 import HomePage from "./components/templates/HomePage/HomePage";
 import BlogPage from "./components/templates/BlogPage/BlogPage";
+import BlogArticle from "./components/templates/BlogArticle/BlogArticle";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Footer /> */}
       <HomePage />
       <BlogPage />
+      <BlogArticle />
     </div>
   );
 }

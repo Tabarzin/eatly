@@ -29,6 +29,14 @@
   color: var(--black-color);
 }
 
+.text-h4 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  line-height: 44px;
+  font-size: 40px;
+  color: var(--black-color);
+}
+
 .text-li {
   font-family: var(--font-secondary);
   font-weight: 400;

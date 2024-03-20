@@ -4,6 +4,7 @@ import st from "./button.module.css";
 type ButtonProps = {
   type: "primary" | "secondary";
   children: React.ReactNode;
+  className?: string;
 };
 
 const Button: React.FC<ButtonProps> = ({ type, children }) => {

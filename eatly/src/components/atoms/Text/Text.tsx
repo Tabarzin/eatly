@@ -44,7 +44,7 @@ import st from "./text.module.css";
 // export default Text;
 
 type TextProps = {
-  type?: "h1" | "h2" | "h3" | "p" | "span" | "li";
+  type?: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "li";
   children: ReactNode;
   customStyle?: CSSProperties;
   className?: string;
