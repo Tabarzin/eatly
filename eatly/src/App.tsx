@@ -36,6 +36,7 @@ import BlogArticle from "./components/templates/BlogArticle/BlogArticle";
 // }
 
 import { Router, Routes, Route } from "react-router-dom";
+import NotFound from "./components/templates/NotFound/NotFound";
 
 function App() {
   return (
@@ -45,10 +46,10 @@ function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/article" element={<BlogArticle />} />
 
-        {/* <Route path="/*" element={<NotFound />} /> */}
+        <Route path="/*" element={<NotFound />} />
       </Routes>
 
-      <HomePage />
+      {/* <HomePage /> */}
     </div>
   );
 }
