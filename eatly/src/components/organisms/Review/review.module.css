@@ -12,9 +12,10 @@
   align-items: center;
 }
 
-/* .reviewcards_wrapper {
+.comments_block {
   display: flex;
-} */
+  flex-wrap: wrap;
+}
 
 .small_review_cards_block {
   display: flex;

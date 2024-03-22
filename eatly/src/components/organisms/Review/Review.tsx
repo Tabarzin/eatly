@@ -17,15 +17,11 @@ const Review: React.FC = () => {
     (state) => state.comments
   );
 
-  console.log(comments, "COOOOOOOO");
-
   useEffect(() => {
     dispatch(fetchComments());
   }, [dispatch]);
 
   const first3Comments = comments.slice(0, 3);
-
-  console.log(first3Comments, "THREEEEEEE");
 
   if (status === "loading") {
     return <div>Loading...</div>;
@@ -41,16 +37,14 @@ const Review: React.FC = () => {
         <Text className={st.h3} type={"h3"}>
           <span className={st.highlight}>Customer</span> Say
         </Text>
-        {first3Comments.map((comment) => (
-          <ReviewCard
-            reviewerName={`@${comment.user.username}`}
-            commentary={comment.body}
-          />
-        ))}
-        <ReviewCard
-          reviewerName={"@omottley2h"}
-          commentary={"I cannot believe how I found you, this is so pretty."}
-        />
+        <div className={st.comments_block}>
+          {first3Comments.map((comment) => (
+            <ReviewCard
+              reviewerName={`@${comment.user.username}`}
+              commentary={comment.body}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
