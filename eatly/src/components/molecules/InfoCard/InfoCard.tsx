@@ -1,26 +1,28 @@
 import React from "react";
 import st from "./infocard.module.css";
-import Text from "../../atoms/Text/Text";
-import Category from "../../atoms/Category/Category";
 
 type InfoCardProps = {
+  mealType: string;
   imageSrc: string;
   time: string;
   title: string;
   rating: string;
+  className?: string;
 };
 
 const InfoCard: React.FC<InfoCardProps> = ({
+  mealType,
   imageSrc,
   title,
   time,
   rating,
+  className,
 }) => {
   return (
     <div className={st.infocard}>
-      <img src={imageSrc} alt="Info Card" />
+      <img src={imageSrc} className={className} alt="Info Card" />
       <div className={st.infocard_text}>
-        <Category props={"Pizza"} />
+        <span className={st.meal_type}>{mealType}</span>
         <span className={st.title}>{title}</span>
         <div className={st.text}>
           <span className={st.details}>{time}</span>

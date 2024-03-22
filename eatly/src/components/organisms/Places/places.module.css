@@ -19,3 +19,11 @@
   justify-content: center;
   gap: 25px;
 }
+
+.infocard_img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+}

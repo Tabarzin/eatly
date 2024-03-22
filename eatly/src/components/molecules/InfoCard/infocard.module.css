@@ -3,8 +3,6 @@
 @import "../../../styles/general_styles.css";
 
 .infocard {
-  width: 400px;
-  height: 300px;
   border: none;
   border-radius: 30px;
 }
@@ -19,6 +17,7 @@
   font-size: 26px;
   line-height: 42px;
   color: var(--black-color);
+  white-space: nowrap;
 }
 
 .details {
@@ -31,4 +30,20 @@
 
 .text {
   display: flex;
+  align-items: center;
+}
+
+.meal_type {
+  display: flex;
+  align-items: center;
+
+  /* width: 2.75rem; */
+  height: 1.625rem;
+  border: none;
+  border-radius: 5.5px;
+  font-family: var(--primary-color);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0;
+  color: var(--info-tag-color);
 }

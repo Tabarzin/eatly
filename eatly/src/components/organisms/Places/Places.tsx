@@ -1,11 +1,40 @@
 import st from "./places.module.css";
 import Text from "../../atoms/Text/Text";
 import InfoCard from "../../molecules/InfoCard/InfoCard";
-import infocard_image_1 from "../../../assets/infocard_image_1.png";
-import infocard_image_2 from "../../../assets/infocard_image_2.png";
-import infocard_image_3 from "../../../assets/infocard_image_3.png";
 
-const Places = () => {
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchRecipes,
+  Recipe,
+  RecipesState,
+} from "../../../store/recipesSlice";
+import { RootState } from "../../../store/store";
+
+const Places: React.FC = () => {
+  const dispatch = useDispatch();
+
+  const { recipes, status, error } = useSelector<RootState, RecipesState>(
+    (state) => state.recipes
+  );
+
+  useEffect(() => {
+    dispatch(fetchRecipes());
+  }, [dispatch]);
+
+  const topThreeSnacks = recipes
+    .slice()
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, 3);
+
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  if (status === "failed") {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <div className={st.places}>
       <span className={st.h3}>
@@ -14,24 +43,17 @@ const Places = () => {
         </Text>
       </span>
       <div className={st.infocardblock}>
-        <InfoCard
-          imageSrc={infocard_image_1}
-          title={"The Chicken King"}
-          time={"24min •"}
-          rating={"4.8"}
-        />
-        <InfoCard
-          imageSrc={infocard_image_1}
-          title={"The Chicken King"}
-          time={"24min •"}
-          rating={"4.8"}
-        />
-        <InfoCard
-          imageSrc={infocard_image_1}
-          title={"The Chicken King"}
-          time={"24min •"}
-          rating={"4.8"}
-        />
+        {topThreeSnacks.map((snack) => (
+          <InfoCard
+            key={snack.id}
+            imageSrc={snack.image}
+            mealType={snack.mealType[1]}
+            title={snack.name}
+            time={`${snack.prepTimeMinutes} min •`}
+            rating={snack.rating.toString()}
+            className={st.infocard_img}
+          />
+        ))}
       </div>
     </div>
   );
