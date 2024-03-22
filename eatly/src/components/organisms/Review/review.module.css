@@ -12,12 +12,9 @@
   align-items: center;
 }
 
-.reviewcards_wrapper {
+/* .reviewcards_wrapper {
   display: flex;
-  /* width: 1225px; */
-  width: 100%;
-  overflow-x: scroll;
-}
+} */
 
 .small_review_cards_block {
   display: flex;
