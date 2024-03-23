@@ -31,8 +31,8 @@ export const fetchArticles = createAsyncThunk<
       "https://dummyjson.com/posts?limit=10&skip=10&select=title,reactions,userId,body,tags"
     );
     const data = await response.json();
-
-    return data.articles;
+    console.log(data, "DATATATATATATA");
+    return data.posts;
   } catch (error) {
     if (error instanceof Error) {
       return rejectWithValue(error.message);
