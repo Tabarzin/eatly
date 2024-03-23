@@ -13,25 +13,28 @@ export interface ArticlesState {
   articles: Article[];
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
+  currentPage: number;
 }
 
 const initialState: ArticlesState = {
   articles: [],
   status: "idle",
   error: null,
+  currentPage: 1,
 };
 
 export const fetchArticles = createAsyncThunk<
   Article[],
-  void,
+  { page: number },
   { rejectValue: string }
->("articles/fetchArticles", async (_, { rejectWithValue }) => {
+>("articles/fetchArticles", async ({ page }, { rejectWithValue }) => {
   try {
     const response = await fetch(
-      "https://dummyjson.com/posts?limit=10&skip=10&select=title,reactions,userId,body,tags"
+      `https://dummyjson.com/posts?limit=12&skip=${
+        (page - 1) * 12
+      }&select=title,reactions,userId,body,tags`
     );
     const data = await response.json();
-    console.log(data, "DATATATATATATA");
     return data.posts;
   } catch (error) {
     if (error instanceof Error) {
@@ -45,7 +48,11 @@ export const fetchArticles = createAsyncThunk<
 const articlesSlice = createSlice({
   name: "articles",
   initialState,
-  reducers: {},
+  reducers: {
+    setCurrentPage: (state, action: PayloadAction<number>) => {
+      state.currentPage = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchArticles.pending, (state) => {
@@ -65,4 +72,5 @@ const articlesSlice = createSlice({
   },
 });
 
+export const { setCurrentPage } = articlesSlice.actions;
 export default articlesSlice.reducer;

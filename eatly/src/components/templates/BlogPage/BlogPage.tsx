@@ -10,20 +10,30 @@ import {
   fetchArticles,
   Article,
   ArticlesState,
+  setCurrentPage,
 } from "../../../store/articlesSlice";
 import { RootState } from "../../../store/store";
 
 const BlogPage: React.FC = () => {
   const dispatch = useDispatch();
+  const { articles, status, error, currentPage } = useSelector<
+    RootState,
+    ArticlesState
+  >((state) => state.articles);
 
-  const { articles, status, error } = useSelector<RootState, ArticlesState>(
-    (state) => state.articles
-  );
-
-  console.log(articles, "AAAAAAAAAAAAAA");
   useEffect(() => {
-    dispatch(fetchArticles());
-  }, [dispatch]);
+    dispatch(fetchArticles({ page: currentPage }));
+  }, [dispatch, currentPage]);
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      dispatch(setCurrentPage(currentPage - 1));
+    }
+  };
+
+  const handleNextPage = () => {
+    dispatch(setCurrentPage(currentPage + 1));
+  };
 
   if (status === "loading") {
     return <div>Loading...</div>;
@@ -39,7 +49,7 @@ const BlogPage: React.FC = () => {
         <Header />
         <Line />
         <Text className={`${st.spacer} ${st.title}`} type={"h2"}>
-          Latest <span className={st.highlight}> Articles</span>
+          Latest <span className={st.highlight}>Articles</span>
         </Text>
         <div className={st.articles_block}>
           {articles.map((article) => (
@@ -47,8 +57,20 @@ const BlogPage: React.FC = () => {
           ))}
         </div>
         <div className={st.btn_block}>
-          <button className={st.arrow_btn}>&#8592;</button>
-          <button className={st.arrow_btn}>&#8594;</button>
+          <button
+            className={st.arrow_btn}
+            onClick={handlePrevPage}
+            disabled={currentPage === 1}
+          >
+            &#8592;
+          </button>
+          <button
+            className={st.arrow_btn}
+            onClick={handleNextPage}
+            disabled={articles.length < 12}
+          >
+            &#8594;
+          </button>
         </div>
         <Footer />
       </div>
