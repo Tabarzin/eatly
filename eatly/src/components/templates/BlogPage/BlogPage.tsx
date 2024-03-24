@@ -5,6 +5,7 @@ import Line from "../../atoms/Line/Line";
 import Text from "../../atoms/Text/Text";
 import BlogCard from "../../molecules/BlogCard/BlogCard";
 import React, { useEffect } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchArticles,
@@ -13,6 +14,7 @@ import {
   setCurrentPage,
 } from "../../../store/articlesSlice";
 import { RootState } from "../../../store/store";
+import { fetchSingleArticle } from "../../../store/singleArticleSlice";
 
 const BlogPage: React.FC = () => {
   const dispatch = useDispatch();
@@ -53,7 +55,9 @@ const BlogPage: React.FC = () => {
         </Text>
         <div className={st.articles_block}>
           {articles.map((article) => (
-            <BlogCard key={article.id} article={article} />
+            <Link key={article.id} to={`/article/${article.id}`}>
+              <BlogCard key={article.id} article={article} />
+            </Link>
           ))}
         </div>
         <div className={st.btn_block}>

@@ -27,7 +27,7 @@ export const fetchComments = createAsyncThunk<
   try {
     const response = await fetch("https://dummyjson.com/comments");
     const data = await response.json();
-    console.log(data, "DAAATAAA");
+
     return data.comments;
   } catch (error) {
     if (error instanceof Error) {

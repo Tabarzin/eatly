@@ -1,12 +1,16 @@
 import st from "./footer.module.css";
 import NavMenu from "../../molecules/NavMenu/NavMenu";
 import Logo from "../../atoms/Logo/Logo";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className={st.footer}>
       <div className={st.footer_nav}>
-        <Logo isLarge />
+        <Link className={st.link} to="/">
+          <Logo isLarge />
+        </Link>
+
         <NavMenu />
       </div>
       <hr className={st.line}></hr>

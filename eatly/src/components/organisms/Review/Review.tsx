@@ -40,6 +40,7 @@ const Review: React.FC = () => {
         <div className={st.comments_block}>
           {first3Comments.map((comment) => (
             <ReviewCard
+              key={comment.id}
               reviewerName={`@${comment.user.username}`}
               commentary={comment.body}
             />
