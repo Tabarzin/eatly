@@ -8,29 +8,38 @@ export interface User {
 }
 
 export interface UserState {
-  userData: User | null;
+  usersData: { [userId: number]: User };
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
 }
 
 const initialState: UserState = {
-  userData: null,
+  usersData: {},
   status: "idle",
   error: null,
 };
 
-export const fetchUserData = createAsyncThunk<
-  User,
-  number,
+export const fetchUsersByIds = createAsyncThunk<
+  { [userId: number]: User },
+  number[],
   { rejectValue: string }
->("user/fetchUserData", async (userId, { rejectWithValue }) => {
+>("user/fetchUsersByIds", async (userIds, { rejectWithValue }) => {
   try {
-    const response = await fetch(`https://dummyjson.com/users/${userId}`);
-    const userData = await response.json();
+    const userPromises = userIds.map((userId) =>
+      fetch(`https://dummyjson.com/users/${userId}`).then((res) => res.json())
+    );
 
-    console.log(userData, "USER");
+    const usersData = await Promise.all(userPromises);
 
-    return userData;
+    const usersDataByIds: { [userId: number]: User } = usersData.reduce(
+      (acc, user) => {
+        acc[user.id] = user;
+        return acc;
+      },
+      {}
+    );
+
+    return usersDataByIds;
   } catch (error) {
     if (error instanceof Error) {
       return rejectWithValue(error.message);
@@ -46,17 +55,17 @@ const userSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchUserData.pending, (state) => {
+      .addCase(fetchUsersByIds.pending, (state) => {
         state.status = "loading";
       })
       .addCase(
-        fetchUserData.fulfilled,
-        (state, action: PayloadAction<User>) => {
+        fetchUsersByIds.fulfilled,
+        (state, action: PayloadAction<{ [userId: number]: User }>) => {
           state.status = "succeeded";
-          state.userData = action.payload;
+          state.usersData = action.payload;
         }
       )
-      .addCase(fetchUserData.rejected, (state, action) => {
+      .addCase(fetchUsersByIds.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.payload || "An unknown error occurred";
       });

@@ -3,8 +3,7 @@
 @import "../../../styles/general_styles.css";
 
 .blogcard {
-  width: 350px;
-  height: 235px;
+  height: 265px;
   border-radius: 16px;
   background-color: var(--white-color);
   display: flex;
@@ -21,7 +20,7 @@
 }
 .tags_star_block {
   display: flex;
-  height: 10px;
+
   align-items: center;
   justify-content: space-between;
 }

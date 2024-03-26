@@ -6,9 +6,7 @@ import User from "../User/User";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store/store";
 import { useEffect } from "react";
-import { fetchUserData } from "../../../store/userSlice";
-import { useParams } from "react-router-dom";
-import { fetchSingleArticle } from "../../../store/singleArticleSlice";
+import { fetchUsersByIds } from "../../../store/userSlice";
 
 interface BlogCardProps {
   article: Article;
@@ -25,20 +23,39 @@ const BlogCard: React.FC<BlogCardProps> = ({ article }) => {
 
     return text;
   };
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUsersByIds([article.userId]));
+  }, [dispatch, article.userId]);
+
+  const userData = useSelector(
+    (state: RootState) => state.user.usersData[article.userId]
+  );
+
   return (
     <div className={st.blogcard}>
       <span className={st.title}>{article.title}</span>
       <div className={st.tags_star_block}>
-        <span className={st.tags}>
-          {article.tags.map((tag) => `#${tag}`).join(", ")}
-        </span>
+        {userData && (
+          <User
+            user={{
+              image: userData.image,
+              firstName: userData.firstName,
+              lastName: userData.lastName,
+            }}
+          />
+        )}
 
         <div className={st.rating_star}>
           <span className={st.rating}>{article.reactions}</span>
           <img src={star} alt="Star icon" />
         </div>
       </div>
-
+      <span className={st.tags}>
+        {article.tags.map((tag) => `#${tag}`).join(", ")}
+      </span>
       <p
         className={st.blogcard_p_text}
         style={{

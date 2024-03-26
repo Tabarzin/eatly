@@ -38,7 +38,6 @@ const BlogArticle = () => {
   }
 
   const { title, body, user, tags, reactions, comments } = articleDetails;
-  console.log(articleDetails, "DETAL");
 
   return (
     <div className="container">
@@ -48,19 +47,6 @@ const BlogArticle = () => {
       <div className={st.article_block}>
         <Text type={"h4"}>{title}</Text>
         <div className={st.user_rating_tags}>
-          {/* <div className={st.user}>
-            <img
-              className={st.user_image}
-              src={user.image}
-              alt={`${user.firstName} ${user.lastName}`}
-            />
-            <div className={st.username_block}>
-              <span className={st.written}>Written By</span>
-              <span className={st.username}>
-                {user.firstName} {user.lastName}
-              </span>
-            </div>
-          </div> */}
           <User
             user={{
               image: user.image,
