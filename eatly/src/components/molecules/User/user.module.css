@@ -1,0 +1,33 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+@import "../../../styles/general_styles.css";
+
+.written {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 16px;
+  color: #8d8d8d;
+}
+
+.username_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  line-height: 26px;
+  font-size: 18px;
+  color: var(--black-color);
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user_image {
+  width: 54px;
+  height: 56px;
+}

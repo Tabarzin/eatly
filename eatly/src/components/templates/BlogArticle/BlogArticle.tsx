@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleArticle } from "../../../store/singleArticleSlice";
 import { RootState } from "../../../store/store";
 import { useParams } from "react-router-dom";
+import User from "../../molecules/User/User";
 
 const BlogArticle = () => {
   const dispatch = useDispatch();
@@ -46,7 +47,7 @@ const BlogArticle = () => {
       <div className={st.article_block}>
         <Text type={"h4"}>{title}</Text>
         <div className={st.user_rating_tags}>
-          <div className={st.user}>
+          {/* <div className={st.user}>
             <img
               className={st.user_image}
               src={user.image}
@@ -58,7 +59,14 @@ const BlogArticle = () => {
                 {user.firstName} {user.lastName}
               </span>
             </div>
-          </div>
+          </div> */}
+          <User
+            user={{
+              image: user.image,
+              firstName: user.firstName,
+              lastName: user.lastName,
+            }}
+          />
           <div className={st.rating_tags}>
             <div className={st.rating_star}>
               <span className={st.rating}>{reactions}</span>
