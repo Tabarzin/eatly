@@ -38,6 +38,7 @@ const BlogArticle = () => {
   }
 
   const { title, body, user, tags, reactions, comments } = articleDetails;
+  console.log(articleDetails, "DETAL");
 
   return (
     <div className="container">

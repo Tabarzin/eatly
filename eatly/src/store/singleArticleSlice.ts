@@ -41,23 +41,25 @@ export const fetchSingleArticle = createAsyncThunk<
   { rejectValue: string }
 >("post/fetchSingleArticle", async (articleId, { rejectWithValue }) => {
   try {
-    const [article, user, comments] = await Promise.all([
+    const [article, comments] = await Promise.all([
       fetch(`https://dummyjson.com/posts/${articleId}`),
-      fetch(`https://dummyjson.com/users/1`),
       fetch(`https://dummyjson.com/comments/post/${articleId}`),
     ]);
 
-    const [articleData, userData, commentsData] = await Promise.all([
+    const [articleData, commentsData] = await Promise.all([
       article.json(),
-      user.json(),
       comments.json(),
     ]);
+
+    const user = await fetch(
+      `https://dummyjson.com/users/${articleData.userId}`
+    ).then((res) => res.json());
 
     const articleDetails: Article = {
       id: articleData.id,
       title: articleData.title,
       body: articleData.body,
-      user: userData.firstName && userData.lastName ? userData : null,
+      user: user,
       comments: commentsData.comments,
       tags: articleData.tags,
       reactions: articleData.reactions,

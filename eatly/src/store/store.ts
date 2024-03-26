@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import recipesReducer from "./recipesSlice";
 import commentsReducer from "./commentsSlice";
 import articlesReducer from "./articlesSlice";
-// import singlePostReducer from "./singleArticleSlice";
+import userReducer from "./userSlice";
 import singleArticleReducer from "./singleArticleSlice";
 
 const store = configureStore({
@@ -10,7 +10,7 @@ const store = configureStore({
     recipes: recipesReducer,
     comments: commentsReducer,
     articles: articlesReducer,
-    // post: singlePostReducer,
+    user: userReducer,
     singleArticle: singleArticleReducer,
   },
 });

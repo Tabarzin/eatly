@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface Article {
+  user: any;
   id: number;
   title: string;
   reactions: number;

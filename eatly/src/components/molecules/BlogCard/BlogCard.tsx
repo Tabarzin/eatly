@@ -2,6 +2,13 @@ import st from "./blogcard.module.css";
 import star from "../../../assets/star.svg";
 
 import { Article } from "../../../store/articlesSlice";
+import User from "../User/User";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../store/store";
+import { useEffect } from "react";
+import { fetchUserData } from "../../../store/userSlice";
+import { useParams } from "react-router-dom";
+import { fetchSingleArticle } from "../../../store/singleArticleSlice";
 
 interface BlogCardProps {
   article: Article;

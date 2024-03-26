@@ -14,7 +14,6 @@ import {
   setCurrentPage,
 } from "../../../store/articlesSlice";
 import { RootState } from "../../../store/store";
-import { fetchSingleArticle } from "../../../store/singleArticleSlice";
 
 const BlogPage: React.FC = () => {
   const dispatch = useDispatch();
@@ -22,7 +21,7 @@ const BlogPage: React.FC = () => {
     RootState,
     ArticlesState
   >((state) => state.articles);
-
+  console.log(articles, "ART");
   useEffect(() => {
     dispatch(fetchArticles({ page: currentPage }));
   }, [dispatch, currentPage]);
