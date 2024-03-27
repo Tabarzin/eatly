@@ -4,6 +4,7 @@ import commentsReducer from "./commentsSlice";
 import articlesReducer from "./articlesSlice";
 import userReducer from "./userSlice";
 import singleArticleReducer from "./singleArticleSlice";
+import commentReducer from "./commentSlice";
 
 const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ const store = configureStore({
     articles: articlesReducer,
     user: userReducer,
     singleArticle: singleArticleReducer,
+    comment: commentReducer,
   },
 });
 

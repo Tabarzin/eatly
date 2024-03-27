@@ -1,0 +1,19 @@
+@import "../../../styles/variables.module.css";
+@import "../../../styles/fonts.css";
+@import "../../../styles/general_styles.css";
+
+.add_comment_form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.add_comment_input {
+  height: 345px;
+  border: solid 1px var(--primary-color);
+  border-radius: 18px;
+  padding: 10px;
+}
+
+.add_comment_button {
+  width: 30%;
+}

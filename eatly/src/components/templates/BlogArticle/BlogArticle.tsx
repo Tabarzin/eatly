@@ -15,6 +15,8 @@ import { RootState } from "../../../store/store";
 import { useParams } from "react-router-dom";
 import User from "../../molecules/User/User";
 
+import CommentInput from "../../molecules/CommentInput/CommentInput";
+
 const BlogArticle = () => {
   const dispatch = useDispatch();
   const { articleDetails, status, error } = useSelector(
@@ -86,6 +88,7 @@ const BlogArticle = () => {
           </div>
         ))}
       </div>
+      <CommentInput postId={undefined} userId={undefined} />
       <Footer />
     </div>
   );

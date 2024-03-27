@@ -5,6 +5,7 @@ type ButtonProps = {
   type: "primary" | "secondary";
   children: React.ReactNode;
   className?: string;
+  disabled?: boolean;
 };
 
 const Button: React.FC<ButtonProps> = ({ type, children }) => {
