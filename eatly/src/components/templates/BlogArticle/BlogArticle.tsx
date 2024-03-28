@@ -8,7 +8,7 @@ import ReviewCard from "../../molecules/ReviewCard/ReviewCard";
 import star from "../../../assets/star.svg";
 import Line from "../../atoms/Line/Line";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleArticle } from "../../../store/singleArticleSlice";
 import { RootState } from "../../../store/store";
@@ -18,6 +18,18 @@ import User from "../../molecules/User/User";
 import CommentInput from "../../molecules/CommentInput/CommentInput";
 
 const BlogArticle = () => {
+  const [newComment, setNewComment] = useState("");
+  const [userComments, setUserComments] = useState([]);
+
+  const handleCommentChange = (commentText: SetStateAction<string>) => {
+    setNewComment(commentText);
+  };
+
+  const handleCommentSubmit = (newCommentData) => {
+    setUserComments([...comments, newCommentData]);
+    setNewComment("");
+  };
+
   const dispatch = useDispatch();
   const { articleDetails, status, error } = useSelector(
     (state: RootState) => state.singleArticle
@@ -87,8 +99,18 @@ const BlogArticle = () => {
             />
           </div>
         ))}
+        {newComment && (
+          <div>
+            <ReviewCard reviewerName="Guest" commentary={newComment} />
+          </div>
+        )}
       </div>
-      <CommentInput postId={undefined} userId={undefined} />
+      <CommentInput
+        postId={3}
+        userId={5}
+        onCommentChange={handleCommentChange}
+        onCommentSubmit={handleCommentSubmit}
+      />
       <Footer />
     </div>
   );

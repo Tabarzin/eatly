@@ -29,7 +29,7 @@ export const postComment = createAsyncThunk<
   const response = await fetch("https://dummyjson.com/comments/add", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ body, postId: 3, userId: 5 }),
+    body: JSON.stringify({ body, postId, userId }),
   });
 
   return await response.json();
@@ -48,7 +48,6 @@ const commentSlice = createSlice({
       .addCase(postComment.fulfilled, (state, action) => {
         state.loading = false;
         state.comment = action.payload;
-        console.log(action.payload.body, "COMMENT");
       })
       .addCase(postComment.rejected, (state, action) => {
         state.loading = false;
