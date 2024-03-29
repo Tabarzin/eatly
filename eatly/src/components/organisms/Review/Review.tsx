@@ -4,11 +4,12 @@ import Text from "../../atoms/Text/Text";
 import ReviewCard from "../../molecules/ReviewCard/ReviewCard";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchComments, CommentsState } from "../../../store/commentsSlice";
-import { RootState } from "../../../store/store";
+import { AppDispatch, RootState } from "../../../store/store";
 import useEmblaCarousel from "embla-carousel-react";
 
 const Review: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
+
   const { comments, status, error } = useSelector<RootState, CommentsState>(
     (state) => state.comments
   );

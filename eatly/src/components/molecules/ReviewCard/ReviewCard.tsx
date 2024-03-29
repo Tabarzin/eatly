@@ -10,7 +10,6 @@ type ReviewCardProps = {
 const ReviewCard: React.FC<ReviewCardProps> = ({
   reviewerName,
   commentary,
-  svgImage,
 }) => {
   return (
     <div className={st.reviewcard}>
