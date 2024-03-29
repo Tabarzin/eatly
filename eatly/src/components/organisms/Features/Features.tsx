@@ -1,6 +1,4 @@
-import React from "react";
 import st from "./features.module.css";
-import cn from "classnames";
 import Text from "../../atoms/Text/Text";
 import features_line_1 from "../../../assets/features_line_1.svg";
 import features_line_2 from "../../../assets/features_line_2.svg";
