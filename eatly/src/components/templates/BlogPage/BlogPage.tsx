@@ -12,11 +12,11 @@ import {
   ArticlesState,
   setCurrentPage,
 } from "../../../store/articlesSlice";
-import { RootState } from "../../../store/store";
+import { AppDispatch, RootState } from "../../../store/store";
 import { fetchUsersByIds } from "../../../store/userSlice";
 
 const BlogPage: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const { articles, status, error, currentPage } = useSelector<
     RootState,
     ArticlesState
