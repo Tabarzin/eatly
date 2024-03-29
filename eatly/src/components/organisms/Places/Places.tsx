@@ -4,15 +4,11 @@ import InfoCard from "../../molecules/InfoCard/InfoCard";
 
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchRecipes,
-  Recipe,
-  RecipesState,
-} from "../../../store/recipesSlice";
-import { RootState } from "../../../store/store";
+import { fetchRecipes, RecipesState } from "../../../store/recipesSlice";
+import { RootState, AppDispatch } from "../../../store/store";
 
 const Places: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const { recipes, status, error } = useSelector<RootState, RecipesState>(
     (state) => state.recipes
