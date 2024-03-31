@@ -54,7 +54,7 @@ const BlogArticle = () => {
   const { title, body, user, tags, reactions, comments } = articleDetails;
 
   return (
-    <main className="container">
+    <main className={st.container}>
       <Header />
       <Line />
       <div className={st.spacer}></div>
@@ -82,7 +82,7 @@ const BlogArticle = () => {
         <div className={st.article_text}>{body}</div>
         <Link to="/blog">
           <Button type={"secondary"} className={st.article_btn}>
-            <img src={arrow_left} alt="Left Arrow" />
+            <img src={arrow_left} className={st.arrow_left} alt="Left Arrow" />
             All Articles
           </Button>
         </Link>

@@ -6,6 +6,9 @@
   margin-bottom: 50px;
 }
 
+.container {
+  padding: 30px;
+}
 .article_block {
   margin-bottom: 50px;
 }
@@ -97,4 +100,13 @@
 .article_btn {
   display: flex;
   align-items: center;
+}
+
+.arrow_left {
+  filter: brightness(1);
+  transition: filter 0.3s ease;
+}
+
+Button:hover .arrow_left {
+  filter: brightness(2.8);
 }
