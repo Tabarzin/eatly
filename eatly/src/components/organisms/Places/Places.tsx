@@ -32,7 +32,7 @@ const Places: React.FC = () => {
   }
 
   return (
-    <div className={st.places}>
+    <section className={st.places}>
       <span className={st.h3}>
         <Text type={"h3"}>
           Our Top <span className={st.highlight}> Lunch</span>
@@ -51,7 +51,7 @@ const Places: React.FC = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
