@@ -17,6 +17,8 @@ const DownloadApp = () => {
           src={mobile_sm}
           className={st.download_img}
           alt="Mobile Phone"
+          loading="lazy"
+          decoding="async"
         />
         <DownloadAppTextBtnBlock />
       </div>

@@ -39,7 +39,13 @@ const Purchases = () => {
       </div>
       <picture>
         <source srcSet={purchases_webp} type="image/webp" />
-        <img className={st.purch_img} src={purchases} alt="Purchases" />
+        <img
+          className={st.purch_img}
+          src={purchases}
+          alt="Purchases"
+          loading="lazy"
+          decoding="async"
+        />
       </picture>
     </div>
   );
