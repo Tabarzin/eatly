@@ -6,8 +6,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-html {
+:global(html) {
   scroll-behavior: smooth;
 }
 .container {
@@ -17,6 +16,7 @@ html {
   margin: 0 auto;
   padding: 1rem;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 768px) {

@@ -24,7 +24,7 @@ a {
   width: 100%;
   max-width: 1205px;
   height: 100%;
-
+  margin: 0 auto;
   gap: 20px;
 }
 
