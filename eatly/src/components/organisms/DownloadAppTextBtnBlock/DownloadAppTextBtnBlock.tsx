@@ -3,6 +3,7 @@ import Text from "../../atoms/Text/Text";
 import List from "../../molecules/List/List";
 import Button from "../../atoms/Button/Button";
 import arrowSW from "../../../assets/arrowSW.png";
+import arrow_right from "../../../assets/arrow_right.svg";
 
 const DownloadAppTextBtnBlock = () => {
   return (
@@ -17,29 +18,7 @@ const DownloadAppTextBtnBlock = () => {
       </div>
       <Button type={"primary"}>
         Download
-        <svg
-          className={st.arrow}
-          width="27"
-          height="26"
-          viewBox="0 0 27 26"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M5.59259 13.0001H20.7811"
-            stroke="white"
-            strokeWidth="2.25773"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M13.1865 5.41675L20.7808 13.0001L13.1865 20.5834"
-            stroke="white"
-            strokeWidth="2.25773"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <img src={arrow_right} alt="Arrow" className={st.arrow} />
       </Button>
       <img className={st.arrowSW} src={arrowSW} alt="Arrow" />
     </div>

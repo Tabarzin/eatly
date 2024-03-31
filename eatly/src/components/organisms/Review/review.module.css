@@ -58,6 +58,7 @@
 }
 .embla__container {
   display: flex;
+  max-width: 1370px;
 }
 .embla__slide {
   flex: 0 0 50%;
@@ -75,4 +76,15 @@
 
   margin: 0 5px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1410px) {
+  .embla__container {
+    flex-direction: column;
+  }
+
+  .comments_block {
+    flex-direction: column;
+    justify-content: center;
+  }
 }

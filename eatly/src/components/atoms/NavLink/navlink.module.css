@@ -11,4 +11,9 @@
   line-height: 26.7px;
   letter-spacing: 0px;
   color: var(--navlink-color);
+  transition: color 0.3s ease;
+}
+
+.navlink:hover {
+  color: var(--primary-color);
 }

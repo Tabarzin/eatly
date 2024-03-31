@@ -24,3 +24,14 @@
   color: var(--primary-color);
   border: var(--primary-color) 1.5px solid;
 }
+
+.primaryButton:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border: var(--primary-color) 1.5px solid;
+}
+
+.secondaryButton:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
