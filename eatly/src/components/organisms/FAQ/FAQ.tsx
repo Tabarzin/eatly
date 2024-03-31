@@ -5,7 +5,7 @@ import faq_lines from "../../../assets/faq_lines.svg";
 
 const FAQ = () => {
   return (
-    <div className={st.faq}>
+    <section className={st.faq}>
       <div className={st.faq_title_block}>
         <img src={faq_lines} className={st.faq_lines} alt="Lines" />
         <Text type={"h3"} className={st.h3}>
@@ -50,7 +50,7 @@ const FAQ = () => {
         />
         <hr className={st.line}></hr>
       </div>
-    </div>
+    </section>
   );
 };
 

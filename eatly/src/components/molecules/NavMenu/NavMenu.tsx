@@ -4,7 +4,7 @@ import { HashLink as Link } from "react-router-hash-link";
 
 const NavMenu = () => {
   return (
-    <div className={st.navmenu}>
+    <nav className={st.navmenu}>
       <Link className={st.link} to="/#recipes">
         <NavLink props="Recipes" />
       </Link>
@@ -17,7 +17,7 @@ const NavMenu = () => {
       <Link className={st.link} to="/blog">
         <NavLink props="Blog" />
       </Link>
-    </div>
+    </nav>
   );
 };
 

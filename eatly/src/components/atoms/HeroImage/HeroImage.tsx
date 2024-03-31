@@ -11,7 +11,7 @@ import arrow_rope_r from "../../../assets/arrow_rope_r.svg";
 
 const HeroImage = () => {
   return (
-    <div className={st.heroimage}>
+    <section className={st.heroimage}>
       <div className={st.linesNE}>
         <img src={linesNE} alt="Lines" />
       </div>
@@ -37,7 +37,7 @@ const HeroImage = () => {
       <div className={st.linesSW}>
         <img src={linesSW} alt="Lines" />
       </div>
-    </div>
+    </section>
   );
 };
 

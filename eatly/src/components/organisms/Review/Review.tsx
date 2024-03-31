@@ -36,31 +36,29 @@ const Review: React.FC = () => {
 
   const first6Comments = comments.slice(0, 6);
   return (
-    <>
-      <div className={st.review}>
-        <Text className={st.h3} type={"h3"}>
-          <span className={st.highlight}>Customer</span> Say
-        </Text>
-        <div className={st.comments_block}>
-          <div className={st.embla} ref={emblaRef}>
-            <div className={st.embla__container}>
-              {first6Comments.map((comment) => (
-                <div className={st.embla__slide} key={comment.id}>
-                  <ReviewCard
-                    reviewerName={`@${comment.user.username}`}
-                    commentary={comment.body}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className={st.embla_btns}>
-            <button className={st.dot} onClick={scrollPrev}></button>
-            <button className={st.dot} onClick={scrollNext}></button>
+    <section className={st.review}>
+      <Text className={st.h3} type={"h3"}>
+        <span className={st.highlight}>Customer</span> Say
+      </Text>
+      <div className={st.comments_block}>
+        <div className={st.embla} ref={emblaRef}>
+          <div className={st.embla__container}>
+            {first6Comments.map((comment) => (
+              <div className={st.embla__slide} key={comment.id}>
+                <ReviewCard
+                  reviewerName={`@${comment.user.username}`}
+                  commentary={comment.body}
+                />
+              </div>
+            ))}
           </div>
         </div>
+        <div className={st.embla_btns}>
+          <button className={st.dot} onClick={scrollPrev}></button>
+          <button className={st.dot} onClick={scrollNext}></button>
+        </div>
       </div>
-    </>
+    </section>
   );
 };
 

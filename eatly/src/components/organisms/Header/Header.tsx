@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className={st.header}>
+    <header className={st.header}>
       <Link className={st.link} to="/">
         <Logo />
       </Link>
 
       <NavMenu />
-    </div>
+    </header>
   );
 };
 

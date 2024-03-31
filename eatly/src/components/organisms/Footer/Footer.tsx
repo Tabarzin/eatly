@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className={st.footer}>
+    <footer className={st.footer}>
       <div className={st.footer_nav}>
         <Link className={st.link} to="/">
           <Logo isLarge />
@@ -85,7 +85,7 @@ const Footer = () => {
           </svg>
         </span>
       </div>
-    </div>
+    </footer>
   );
 };
 

@@ -9,7 +9,7 @@ import PurchasesCard from "../../molecules/PurchasesCard/PurchasesCard";
 
 const Purchases = () => {
   return (
-    <div className={st.purchases}>
+    <section className={st.purchases}>
       <div className={st.text_block}>
         <Text className={st.h2} type={"h2"}>
           Control <span className={st.highlight}> Purchases</span>
@@ -49,7 +49,7 @@ const Purchases = () => {
           decoding="async"
         />
       </picture>
-    </div>
+    </section>
   );
 };
 

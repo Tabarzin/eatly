@@ -54,7 +54,7 @@ const BlogArticle = () => {
   const { title, body, user, tags, reactions, comments } = articleDetails;
 
   return (
-    <div className="container">
+    <main className="container">
       <Header />
       <Line />
       <div className={st.spacer}></div>
@@ -112,7 +112,7 @@ const BlogArticle = () => {
         onCommentSubmit={handleCommentSubmit}
       />
       <Footer />
-    </div>
+    </main>
   );
 };
 

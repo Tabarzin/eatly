@@ -50,7 +50,7 @@ const BlogPage: React.FC = () => {
   };
 
   return (
-    <div className="container">
+    <main className="container">
       <div className={st.blogpage}>
         <Header />
         <Line />
@@ -87,7 +87,7 @@ const BlogPage: React.FC = () => {
         </div>
         <Footer />
       </div>
-    </div>
+    </main>
   );
 };
 

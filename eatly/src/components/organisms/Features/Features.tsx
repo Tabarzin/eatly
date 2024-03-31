@@ -7,7 +7,7 @@ import features_right_line_2 from "../../../assets/features_right_line_2.svg";
 
 const Features = () => {
   return (
-    <div className={st.features}>
+    <section className={st.features}>
       <div className={st.features_left_lines}>
         <img className={st.line_2} src={features_line_2} alt="Line" />
         <img className={st.line_1} src={features_line_1} alt="Line" />
@@ -48,7 +48,7 @@ const Features = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
