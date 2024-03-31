@@ -23,7 +23,7 @@ const HeroImage = () => {
           time={"3:09 PM"}
         />
       </div>
-      {/* <img src={food} alt="Food Dish" /> */}
+
       <img
         srcSet={`${food_sm_webp} 300w, ${food_webp} 600w, ${food_png} 900w`}
         sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"

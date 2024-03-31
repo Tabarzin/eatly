@@ -15,13 +15,15 @@ const Purchases = () => {
           Control <span className={st.highlight}> Purchases</span>
           <br /> Via Dashboard
         </Text>
+
         <PurchasesCard
-          className={st.purch_card}
+          className={`${st.purch_card} ${st.first_purch_card}`}
           imageSrc={purch_card_image_1}
           title="Chicken Hell"
           status="On The Way"
           time="3:09 PM"
         />
+
         <PurchasesCard
           className={st.purch_card}
           imageSrc={purch_card_image_2}

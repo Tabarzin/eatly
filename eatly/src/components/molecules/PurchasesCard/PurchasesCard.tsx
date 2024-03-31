@@ -15,11 +15,12 @@ const PurchasesCard: React.FC<PurchasesCardProps> = ({
   title,
   status,
   time,
+  className,
 }) => {
   const statusClass = status === "Cancelled" ? st.cancelledStatus : st.status;
 
   return (
-    <div className={st.purchases_card}>
+    <div className={`${st.purchases_card} ${className}`}>
       <div>
         <img src={imageSrc} alt="Purchase" />
       </div>
