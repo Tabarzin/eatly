@@ -1,6 +1,7 @@
 import st from "./purchases.module.css";
 import Text from "../../atoms/Text/Text";
 import purchases from "../../../assets/purchases.png";
+import purchases_webp from "../../../assets/purchases.webp";
 import purch_card_image_1 from "../../../assets/purch_card_image_1.png";
 import purch_card_image_2 from "../../../assets/purch_card_image_2.png";
 import purch_card_image_3 from "../../../assets/purch_card_image_3.png";
@@ -36,7 +37,10 @@ const Purchases = () => {
           time="Yesterday"
         />
       </div>
-      <img className={st.purch_img} src={purchases} alt="Purchases" />
+      <picture>
+        <source srcSet={purchases_webp} type="image/webp" />
+        <img className={st.purch_img} src={purchases} alt="Purchases" />
+      </picture>
     </div>
   );
 };

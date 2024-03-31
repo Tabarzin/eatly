@@ -3,10 +3,11 @@ import BlogPage from "./components/templates/BlogPage/BlogPage";
 import BlogArticle from "./components/templates/BlogArticle/BlogArticle";
 import { Routes, Route } from "react-router-dom";
 import NotFound from "./components/templates/NotFound/NotFound";
+import st from "./app.module.css";
 
 function App() {
   return (
-    <div className="container">
+    <div className={st.container}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/blog" element={<BlogPage />} />
