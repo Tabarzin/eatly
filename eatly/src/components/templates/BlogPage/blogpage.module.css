@@ -37,6 +37,7 @@ a {
   font-size: 55px;
   cursor: pointer;
   padding: 20px;
+  background: transparent;
 }
 
 @media screen and (max-width: 600px) {

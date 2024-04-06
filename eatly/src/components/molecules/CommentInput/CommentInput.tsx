@@ -45,7 +45,7 @@ const CommentInput = ({ postId, userId, onCommentChange, onCommentSubmit }) => {
         />
       ))}
 
-      <Text type={"h3"}>
+      <Text type={"h3"} className={st.h3}>
         Add <span className={st.highlight}> comment </span>
       </Text>
       <form className={st.add_comment_form} onSubmit={handleSubmit}>

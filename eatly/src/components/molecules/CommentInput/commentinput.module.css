@@ -17,3 +17,9 @@
 .add_comment_button {
   width: 30%;
 }
+
+@media screen and (max-width: 320px) {
+  .h3 {
+    line-height: 37px;
+  }
+}

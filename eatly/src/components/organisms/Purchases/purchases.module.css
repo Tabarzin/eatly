@@ -56,3 +56,9 @@
     object-fit: contain;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .text_block {
+    margin-left: 0;
+  }
+}

@@ -43,3 +43,46 @@
   width: 215px;
   justify-content: space-between;
 }
+
+.insta {
+  transition: transform 0.3s ease;
+}
+.in {
+  transition: transform 0.3s ease;
+}
+.fb {
+  transition: transform 0.3s ease;
+}
+.tw {
+  transition: transform 0.3s ease;
+}
+
+.insta:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.in:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.fb:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.tw:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  .footer {
+    margin-left: 0;
+  }
+  .footer_nav {
+    margin: 0;
+  }
+
+  .copyright_social {
+    margin: 0;
+  }
+}

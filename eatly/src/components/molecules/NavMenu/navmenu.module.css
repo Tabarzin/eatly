@@ -19,5 +19,6 @@
 @media (max-width: 400px) {
   .navmenu {
     margin-left: 0;
+    flex-direction: column;
   }
 }

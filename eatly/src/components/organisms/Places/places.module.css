@@ -27,3 +27,9 @@
   border-top-left-radius: 20%;
   border-top-right-radius: 20%;
 }
+
+@media screen and (max-width: 350px) {
+  .h3 {
+    line-height: 45px;
+  }
+}

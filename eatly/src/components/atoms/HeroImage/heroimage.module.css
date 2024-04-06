@@ -4,13 +4,19 @@
 
 .heroimage {
   position: relative;
-  /* width: 591px;
-  height: 603px; */
+
   max-width: 100%;
   height: auto;
   object-fit: contain;
   display: flex;
   align-items: flex-end;
+}
+
+.hero_image_food {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .linesNE {
@@ -21,8 +27,8 @@
 
 .hero_purch_card {
   position: absolute;
-  top: -13%;
-  left: 45%;
+  top: -17%;
+  left: 48%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -40,21 +46,37 @@
 
 .arrow_rope_r {
   position: absolute;
-  top: 34%;
-  right: 14%;
+  top: 13%;
+  right: -15%;
 }
 
-@media (max-width: 700px) {
-  .heroimage {
-    width: 190%;
+@media screen and (max-width: 901px) {
+  .graph {
+    top: 74%;
+    right: 10%;
   }
-
-  .linesNE {
-    top: -20%;
-    right: 37%;
+  .arrow_rope_r,
+  .linesNE,
+  .linesSW {
+    display: none;
   }
-
   .hero_image {
     margin-right: 0;
   }
+  .hero_purch_card {
+    left: 20%;
+  }
+}
+
+@media (max-width: 404px) {
+  .graph,
+  .hero_purch_card {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+}
+
+@media screen and (max-width: 485px) {
 }

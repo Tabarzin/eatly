@@ -15,9 +15,10 @@ const Footer = () => {
       </div>
       <hr className={st.line}></hr>
       <div className={st.copyright_social}>
-        <span className={st.copyright}>© 2023 EATLY All Rights Reserved.</span>
+        <span className={st.copyright}>© 2024 EATLY All Rights Reserved.</span>
         <span className={st.social}>
           <svg
+            className={st.insta}
             width="22"
             height="20"
             viewBox="0 0 22 20"
@@ -42,6 +43,7 @@ const Footer = () => {
             />
           </svg>
           <svg
+            className={st.in}
             width="23"
             height="20"
             viewBox="0 0 23 20"
@@ -56,6 +58,7 @@ const Footer = () => {
             />
           </svg>
           <svg
+            className={st.fb}
             width="11"
             height="20"
             viewBox="0 0 11 20"
@@ -70,6 +73,7 @@ const Footer = () => {
             />
           </svg>
           <svg
+            className={st.tw}
             width="22"
             height="17"
             viewBox="0 0 22 17"

@@ -25,11 +25,13 @@ const HeroImage = () => {
       </div>
 
       <img
-        srcSet={`${food_sm_webp} 300w, ${food_webp} 600w, ${food_png} 900w`}
-        sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+        className={st.hero_image_food}
+        srcSet={`${food_sm_webp} 300w, ${food_webp} 500w, ${food_png} 900w`}
+        sizes="(max-width: 900px) 100vw, 900px"
         src={food_png}
         alt="Food Dish"
       />
+
       <div className={st.arrow_rope_r}>
         <img src={arrow_rope_r} alt="Arrow Image" />
       </div>

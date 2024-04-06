@@ -31,7 +31,17 @@
   }
 
   .hero_text_block {
-    margin-left: 0;
+    /* margin-left: 0; */
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hero {
+    margin-bottom: 300px;
+  }
+  .hero_image {
+    margin-right: 0;
   }
 }
 
