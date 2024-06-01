@@ -48,8 +48,12 @@ const BlogCard: React.FC<BlogCardProps> = ({ article }) => {
           />
         )}
 
-        <div className={st.rating_star}>
+        {/* <div className={st.rating_star}>
           <span className={st.rating}>{article.reactions}</span>
+          <img src={star} alt="Star icon" />
+        </div> */}
+        <div className={st.rating_star}>
+          <span className={st.rating}>{article.reactions?.likes || 0}</span>
           <img src={star} alt="Star icon" />
         </div>
       </div>

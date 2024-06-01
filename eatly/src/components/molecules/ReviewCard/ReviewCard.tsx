@@ -1,11 +1,10 @@
 import React from "react";
 import st from "./reviewcard.module.css";
 
-type ReviewCardProps = {
-  reviewerName?: string;
+interface ReviewCardProps {
+  reviewerName: string;
   commentary: string;
-  svgImage?: React.ReactNode;
-};
+}
 
 const ReviewCard: React.FC<ReviewCardProps> = ({
   reviewerName,
@@ -31,7 +30,11 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
           />
         </svg>
       </div>
-      <p className={st.commentary}>{commentary}</p>
+      {typeof commentary === "string" ? (
+        <p className={st.commentary}>{commentary}</p>
+      ) : (
+        <p className={st.commentary}>{commentary.body}</p>
+      )}
     </div>
   );
 };
