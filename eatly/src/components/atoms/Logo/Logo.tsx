@@ -7,8 +7,6 @@ interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ isLarge = false }) => {
-  const svgWidth = isLarge ? 61 : 46;
-  const svgHeight = isLarge ? 57 : 43;
   const textSize = isLarge ? "28px" : "22px";
 
   return (

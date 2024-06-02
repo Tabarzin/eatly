@@ -4,7 +4,6 @@ import BlogArticle from "./components/templates/BlogArticle/BlogArticle";
 import { Routes, Route } from "react-router-dom";
 import NotFound from "./components/templates/NotFound/NotFound";
 import st from "./app.module.css";
-import React from "react";
 
 function App() {
   return (

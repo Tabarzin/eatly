@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "./store";
 
 interface Reactions {
   likes: number;
@@ -80,14 +79,20 @@ const commentSlice = createSlice({
         state.loading = true;
         state.error = null;
       })
-      .addCase(postComment.fulfilled, (state, action) => {
-        state.loading = false;
-        state.comment = action.payload;
-      })
+
+      .addCase(
+        postComment.fulfilled,
+        (state, action: PayloadAction<PostCommentResponse>) => {
+          state.loading = false;
+          state.comment = action.payload;
+        }
+      )
       .addCase(postComment.rejected, (state, action) => {
         state.loading = false;
         state.error =
-          action.payload || action.error.message || "Something went wrong";
+          typeof action.payload === "string"
+            ? action.payload
+            : action.error.message || "Something went wrong";
       });
   },
 });

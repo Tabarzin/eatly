@@ -2,7 +2,6 @@ import Button from "../../atoms/Button/Button";
 import st from "./notfound.module.css";
 import oops from "../../../assets/oops.svg";
 import { HashLink as Link } from "react-router-hash-link";
-import React from "react";
 import Header from "../../organisms/Header/Header";
 
 const NotFound = () => {

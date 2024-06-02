@@ -5,11 +5,17 @@ import { Article } from "../../../store/articlesSlice";
 import User from "../User/User";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../store/store";
-import { ReactNode, useEffect } from "react";
+import { useEffect } from "react";
 import { fetchUsersByIds } from "../../../store/userSlice";
+import React from "react";
 
 interface BlogCardProps {
   article: Article;
+  userData: {
+    image: string;
+    firstName: string;
+    lastName: string;
+  };
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({ article }) => {

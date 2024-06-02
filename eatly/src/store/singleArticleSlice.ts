@@ -1,15 +1,23 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface User {
-  id: number;
-  firstName: string;
   lastName: string;
+  firstName: string;
   image: string;
+  id: number;
+  username: string;
+  fullName: string;
 }
 
-export interface Comment {
-  id: number;
+interface Reactions {
+  likes: number;
+}
+
+interface Comment {
+  id: string;
   body: string;
+  postId: number;
+  reactions: Reactions;
   user: User;
 }
 
@@ -19,7 +27,7 @@ export interface Article {
   body: string;
   user: User;
   tags: string[];
-  reactions: number;
+  reactions: Reactions;
   comments: Comment[];
 }
 

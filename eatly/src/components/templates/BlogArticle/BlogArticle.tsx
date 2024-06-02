@@ -8,7 +8,7 @@ import ReviewCard from "../../molecules/ReviewCard/ReviewCard";
 import star from "../../../assets/star.svg";
 import Line from "../../atoms/Line/Line";
 import { Link, useNavigate } from "react-router-dom";
-import { SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleArticle } from "../../../store/singleArticleSlice";
 import { AppDispatch, RootState } from "../../../store/store";
@@ -17,13 +17,13 @@ import User from "../../molecules/User/User";
 import { v4 as uuidv4 } from "uuid";
 import CommentInput from "../../molecules/CommentInput/CommentInput";
 import { postComment } from "../../../store/commentSlice";
-import React from "react";
 
 interface User {
   id: number;
   username: string;
   fullName: string;
 }
+
 interface Reactions {
   likes: number;
 }
@@ -47,11 +47,6 @@ const BlogArticle = () => {
 
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   const articleId = parseInt(id as string, 10);
-  //   dispatch(fetchSingleArticle(articleId));
-  // }, [dispatch, id]);
 
   useEffect(() => {
     if (id) {
