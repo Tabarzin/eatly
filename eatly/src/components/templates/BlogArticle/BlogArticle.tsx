@@ -7,7 +7,7 @@ import arrow_left from "../../../assets/arrow_left.svg";
 import ReviewCard from "../../molecules/ReviewCard/ReviewCard";
 import star from "../../../assets/star.svg";
 import Line from "../../atoms/Line/Line";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SetStateAction, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleArticle } from "../../../store/singleArticleSlice";
@@ -17,6 +17,7 @@ import User from "../../molecules/User/User";
 import { v4 as uuidv4 } from "uuid";
 import CommentInput from "../../molecules/CommentInput/CommentInput";
 import { postComment } from "../../../store/commentSlice";
+import React from "react";
 
 interface User {
   id: number;
@@ -45,10 +46,23 @@ const BlogArticle = () => {
   );
 
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   const articleId = parseInt(id as string, 10);
+  //   dispatch(fetchSingleArticle(articleId));
+  // }, [dispatch, id]);
 
   useEffect(() => {
-    const articleId = parseInt(id as string, 10);
-    dispatch(fetchSingleArticle(articleId));
+    if (id) {
+      const articleId = parseInt(id, 10);
+      if (!isNaN(articleId)) {
+        dispatch(fetchSingleArticle(articleId));
+      } else {
+        console.error("Invalid article ID");
+        navigate("/NotFound");
+      }
+    }
   }, [dispatch, id]);
 
   const handleCommentChange = (commentText: string) => {
@@ -116,7 +130,7 @@ const BlogArticle = () => {
           />
           <div className={st.rating_tags}>
             <div className={st.rating_star}>
-              <span className={st.rating}>{reactions.likes}</span>
+              <span className={st.rating}>{reactions?.likes}</span>
               <img src={star} alt="Star icon" />
             </div>
 
