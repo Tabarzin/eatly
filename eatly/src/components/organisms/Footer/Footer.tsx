@@ -6,15 +6,15 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className={st.footer}>
-      <div className={st.footer_nav}>
+      <nav className={st.footer_nav}>
         <Link className={st.link} to="/">
           <Logo isLarge />
         </Link>
 
         <NavMenu />
-      </div>
+      </nav>
       <hr className={st.line}></hr>
-      <div className={st.copyright_social}>
+      <nav className={st.copyright_social}>
         <span className={st.copyright}>© 2024 EATLY All Rights Reserved.</span>
         <span className={st.social}>
           <svg
@@ -88,7 +88,7 @@ const Footer = () => {
             />
           </svg>
         </span>
-      </div>
+      </nav>
     </footer>
   );
 };

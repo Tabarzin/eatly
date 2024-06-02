@@ -13,14 +13,14 @@ const Features = () => {
         <img className={st.line_1} src={features_line_1} alt="Line" />
       </div>
       <div className={st.features_blocks}>
-        <div className={`${st.features_block} ${st.features_block_border}`}>
+        <div className={st.features_block}>
           <Text className={st.features_large}>10K+</Text>
           <Text className={st.features_small}>
             Satisfied Customers <br /> All Great Over The World
           </Text>
         </div>
 
-        <div className={`${st.features_block} ${st.features_block_border}`}>
+        <div className={st.features_block}>
           <Text className={st.features_large}>4M </Text>
           <Text type={"p"} className={st.features_small}>
             Healthy Dishes Sold <br />

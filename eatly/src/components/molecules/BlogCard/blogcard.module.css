@@ -55,4 +55,8 @@
   font-weight: 400;
   line-height: 26px;
   color: var(--black-color);
+
+  overflow: hidden;
+
+  display: -webkit-box;
 }

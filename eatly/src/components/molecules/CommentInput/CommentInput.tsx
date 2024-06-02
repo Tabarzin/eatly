@@ -1,63 +1,44 @@
 import st from "./commentinput.module.css";
 import Text from "../../atoms/Text/Text";
 import Button from "../../atoms/Button/Button";
-import { useDispatch } from "react-redux";
-import { postComment } from "../../../store/commentSlice";
-import { useState } from "react";
 
-import { useDebouncedState } from "@mantine/hooks";
-import ReviewCard from "../ReviewCard/ReviewCard";
+interface CommentInputProps {
+  postId: number;
+  userId: number;
+  onCommentChange: (commentText: string) => void;
+  onCommentSubmit: (body: string, postId: number, userId: number) => void;
+  newComment: string;
+}
 
-const CommentInput = ({ postId, userId, onCommentChange, onCommentSubmit }) => {
-  const dispatch = useDispatch();
-  const [commentBody, setCommentBody] = useDebouncedState("", 300);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submittedText, setSubmittedText] = useState("");
-  const [submittedComments, setSubmittedComments] = useState([]);
-
-  const handleInputChange = (e) => {
-    setCommentBody(e.target.value);
+const CommentInput: React.FC<CommentInputProps> = ({
+  postId,
+  userId,
+  onCommentChange,
+  onCommentSubmit,
+  newComment,
+}) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    onCommentChange(e.target.value);
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    const newComment = await dispatch(
-      postComment({ body: commentBody, postId, userId })
-    );
-
-    setSubmittedText(commentBody);
-    setIsSubmitting(false);
-    onCommentChange("");
-
-    onCommentSubmit(newComment.payload);
-    setSubmittedComments([...submittedComments, newComment]);
-    setCommentBody("");
+    onCommentSubmit(newComment, postId, userId);
   };
 
   return (
     <div className={st.add_comment}>
-      {submittedComments.map((comment, index) => (
-        <ReviewCard
-          key={index}
-          reviewerName={`@${comment.payload.user.username}`}
-          commentary={submittedText}
-        />
-      ))}
-
-      <Text type={"h3"} className={st.h3}>
-        Add <span className={st.highlight}> comment </span>
+      <Text type="h3" className={st.h3}>
+        Add <span className={st.highlight}>comment</span>
       </Text>
       <form className={st.add_comment_form} onSubmit={handleSubmit}>
         <textarea
           className={st.add_comment_input}
+          value={newComment}
           onChange={handleInputChange}
-          placeholder="ENTER YOUR COMMENT"
-          disabled={isSubmitting}
+          placeholder="Add your comment"
         />
-        <Button type={"primary"} disabled={isSubmitting || !commentBody.trim()}>
-          {isSubmitting ? "Posting..." : "Send"}
-        </Button>
+        <Button type="primary">Send</Button>
       </form>
     </div>
   );

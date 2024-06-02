@@ -30,11 +30,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
           />
         </svg>
       </div>
-      {typeof commentary === "string" ? (
-        <p className={st.commentary}>{commentary}</p>
-      ) : (
-        <p className={st.commentary}>{commentary.body}</p>
-      )}
+      <p className={st.commentary}>{commentary}</p>
     </div>
   );
 };

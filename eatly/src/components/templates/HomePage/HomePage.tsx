@@ -8,10 +8,11 @@ import Review from "../../organisms/Review/Review";
 import FAQ from "../../organisms/FAQ/FAQ";
 import Footer from "../../organisms/Footer/Footer";
 import Line from "../../atoms/Line/Line";
+import st from "./main.module.css";
 
 const HomePage = () => {
   return (
-    <main>
+    <main className={st.main}>
       <Header />
       <Line />
       <Hero />

@@ -15,11 +15,25 @@ const Review: React.FC = () => {
   );
   const [emblaRef, emblaApi] = useEmblaCarousel();
 
+  const step = 3;
+
   const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
+    if (emblaApi) {
+      const currentIndex = emblaApi.selectedScrollSnap();
+      const targetIndex = Math.max(currentIndex - step, 0);
+      emblaApi.scrollTo(targetIndex);
+    }
   }, [emblaApi]);
+
   const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
+    if (emblaApi) {
+      const currentIndex = emblaApi.selectedScrollSnap();
+      const targetIndex = Math.min(
+        currentIndex + step,
+        emblaApi.scrollSnapList().length - 1
+      );
+      emblaApi.scrollTo(targetIndex);
+    }
   }, [emblaApi]);
 
   useEffect(() => {

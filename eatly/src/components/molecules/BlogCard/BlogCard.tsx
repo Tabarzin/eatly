@@ -4,8 +4,8 @@ import star from "../../../assets/star.svg";
 import { Article } from "../../../store/articlesSlice";
 import User from "../User/User";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
-import { useEffect } from "react";
+import { AppDispatch, RootState } from "../../../store/store";
+import { ReactNode, useEffect } from "react";
 import { fetchUsersByIds } from "../../../store/userSlice";
 
 interface BlogCardProps {
@@ -24,7 +24,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ article }) => {
     return text;
   };
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     dispatch(fetchUsersByIds([article.userId]));
@@ -48,10 +48,6 @@ const BlogCard: React.FC<BlogCardProps> = ({ article }) => {
           />
         )}
 
-        {/* <div className={st.rating_star}>
-          <span className={st.rating}>{article.reactions}</span>
-          <img src={star} alt="Star icon" />
-        </div> */}
         <div className={st.rating_star}>
           <span className={st.rating}>{article.reactions?.likes || 0}</span>
           <img src={star} alt="Star icon" />
@@ -60,18 +56,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ article }) => {
       <span className={st.tags}>
         {article.tags.map((tag) => `#${tag}`).join(", ")}
       </span>
-      <p
-        className={st.blogcard_p_text}
-        style={{
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          display: "-webkit-box",
-          WebkitLineClamp: 3,
-          WebkitBoxOrient: "vertical",
-        }}
-      >
-        {truncateText(article.body, 3)}
-      </p>
+      <p className={st.blogcard_p_text}>{truncateText(article.body, 3)}</p>
     </div>
   );
 };

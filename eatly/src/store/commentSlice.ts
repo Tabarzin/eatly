@@ -1,19 +1,16 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "./store";
+
+interface Reactions {
+  likes: number;
+}
 
 interface Comment {
   id: number;
   body: string;
   postId: number;
-  user: {
-    id: number;
-    username: string;
-  };
-}
-
-interface CommentState {
-  comment: Comment | null;
-  loading: boolean;
-  error: string | null;
+  reactions: Reactions;
+  user: User;
 }
 
 const initialState: CommentState = {
@@ -22,18 +19,56 @@ const initialState: CommentState = {
   error: null,
 };
 
-export const postComment = createAsyncThunk<
-  Comment,
-  { body: string; postId: number; userId: number }
->("comments/postComment", async ({ body, postId, userId }) => {
-  const response = await fetch("https://dummyjson.com/comments/add", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ body, postId, userId }),
-  });
+interface PostCommentResponse {
+  id: number;
+  body: string;
+  postId: number;
+  reactions: Reactions;
+  user: User;
+}
 
-  return await response.json();
-});
+interface PostCommentParams {
+  body: string;
+  postId: number;
+  userId: number;
+}
+
+interface User {
+  id: number;
+  username: string;
+  fullName: string;
+}
+
+interface CommentState {
+  comment: Comment | null;
+  loading: boolean;
+  error: string | null;
+}
+
+export const postComment = createAsyncThunk<
+  PostCommentResponse,
+  PostCommentParams
+>(
+  "comments/postComment",
+  async ({ body, postId, userId }, { rejectWithValue }) => {
+    try {
+      const response = await fetch("https://dummyjson.com/comments/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ body, postId, userId }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to post comment: " + response.statusText);
+      }
+
+      const data: PostCommentResponse = await response.json();
+      return data;
+    } catch (error: any) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
 
 const commentSlice = createSlice({
   name: "comments",
@@ -51,7 +86,8 @@ const commentSlice = createSlice({
       })
       .addCase(postComment.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.error.message || "Something went wrong";
+        state.error =
+          action.payload || action.error.message || "Something went wrong";
       });
   },
 });

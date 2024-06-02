@@ -4,18 +4,14 @@
 
 .footer {
   background-color: #eaeaea;
-  height: 21.5625rem;
-
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: -40px;
 }
 
 .footer_nav {
   display: flex;
   justify-content: space-between;
-  margin: 0 110px;
 }
 
 .line {
@@ -28,7 +24,6 @@
 .copyright_social {
   display: flex;
   justify-content: space-between;
-  margin: 0 90px;
 }
 .copyright {
   display: flex;
@@ -40,8 +35,9 @@
 }
 .social {
   display: flex;
-  width: 215px;
+  gap: 45px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .insta {
@@ -74,15 +70,20 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 320px) {
-  .footer {
-    margin-left: 0;
+@media screen and (max-width: 395px) {
+  .social {
+    justify-content: center;
   }
+}
+
+@media screen and (max-width: 310px) {
   .footer_nav {
-    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .copyright_social {
-    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

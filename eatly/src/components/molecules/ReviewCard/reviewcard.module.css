@@ -5,19 +5,15 @@
 .reviewcard {
   background-color: var(--white-color);
   border-radius: 20px;
-  width: 95%;
-  height: 170px;
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 10px;
-  margin-bottom: 10px;
 }
 
 .name_quote {
   display: flex;
   justify-content: space-between;
-
   align-items: flex-end;
-  margin-left: 40px;
 }
 
 .reviewer {
@@ -35,5 +31,4 @@
   font-size: 18px;
   line-height: 26px;
   color: var(--review-bg-color);
-  margin-left: 32px;
 }

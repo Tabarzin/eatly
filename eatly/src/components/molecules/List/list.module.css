@@ -2,6 +2,8 @@
 @import "../../../styles/fonts.css";
 @import "../../../styles/general_styles.css";
 
-.margin {
-  margin-bottom: 22px;
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

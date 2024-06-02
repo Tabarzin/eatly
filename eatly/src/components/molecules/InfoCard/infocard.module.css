@@ -7,17 +7,12 @@
   border-radius: 30px;
 }
 
-.infocard_text {
-  margin-left: 40px;
-}
-
 .title {
   font-family: var(--font-primary);
   font-weight: 600;
   font-size: 26px;
   line-height: 42px;
   color: var(--black-color);
-  white-space: nowrap;
 }
 
 .details {
@@ -37,7 +32,6 @@
   display: flex;
   align-items: center;
 
-  /* width: 2.75rem; */
   height: 1.625rem;
   border: none;
   border-radius: 5.5px;

@@ -80,15 +80,12 @@
   color: var(--black-color);
   margin-bottom: 40px;
 }
-.article_btn {
-}
 
 .user_image {
   width: 54px;
   height: 56px;
 }
-.comments {
-}
+
 .comments_title {
   font-family: var(--font-primary);
   font-weight: 600;
@@ -109,4 +106,16 @@
 
 Button:hover .arrow_left {
   filter: brightness(2.8);
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 400px) {
+  .user_rating_tags {
+    flex-wrap: wrap;
+  }
 }

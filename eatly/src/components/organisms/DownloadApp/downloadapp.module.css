@@ -4,13 +4,7 @@
 
 .downloadapp {
   display: flex;
-  justify-content: space-around;
-  margin: 0 auto;
-  margin-bottom: 115px;
-}
-
-.download_img {
-  margin-left: 85px;
+  justify-content: space-evenly;
 }
 
 @media (max-width: 1110px) {
@@ -18,14 +12,5 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-  }
-}
-
-@media (max-width: 400px) {
-  .download_img {
-    margin-left: 40px;
-  }
-  .downloadapp {
-    margin-bottom: 180px;
   }
 }

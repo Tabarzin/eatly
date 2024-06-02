@@ -3,16 +3,16 @@
 
 .header {
   display: flex;
-  padding-top: 38px;
-  padding-left: 64px;
-  margin-bottom: 35px;
+  align-items: center;
 }
 
 .link {
   text-decoration: none;
 }
+
 @media (max-width: 400px) {
   .header {
-    padding-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
